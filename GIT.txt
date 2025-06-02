@@ -18,4 +18,17 @@
     4. 기본설정으로 계속 [next] 버튼 클릭하여 설치 진행 -> 완료
     5. VSCODE 재실행 
     6.  vscode 왼쪽 메뉴  [소스제어] 클릭 -> [ GitHub ] 게시 -> [로그인]허용 -> 웹페이지( 깃허브페이지(로그인) ) -> [continue ]
-    7. publish to github public repository
+    7. publish to github public repository (선택후) -> [확인]
+    =============== (PC마다 1번 , 자리 변경시 ) ====================
+    8. vscode 상단 메뉴 [ 터미널 ] 클릭 -> [ 새 터미널 ] 
+    9. 터미널 상단메뉴 [+] 옆에 [v] 클릭 -> [ git bash ]    *깃허브 전용 터미널(명령어 이용한 프로그램 사용)
+        [ git user.name 확인 ] git config --global user.name
+        [ git user.name 설정 ] git config --global user.name git닉네임
+        [ git user.email 확인 ] git config --global user.email 
+        [ git user.email 설정] git config --global user.email git아이디@이메일포함
+    10. vscode 왼쪽 메뉴  [소스제어] 클릭 -> 
+        1. 상단에 메시지(코드를 업로드할때 기록할 메모) 작성 
+        2. [ 커밋 및 푸시 ] * 현재 PC에 git 완료 
+        3. 
+
+
