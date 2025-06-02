@@ -1,0 +1,40 @@
+/* 전체 구역 */
+body{
+    background-color: pink;/* 배경색*/
+    text-align: center; /* img input audio */
+}
+/* 제목 */
+.info > .title{
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid white;
+    border-radius: 50px ; /* 둥근 모서리 */
+    width: 300px;
+    padding: 10px;
+    margin: 0 auto;
+}
+/* 이미지 */
+.info > div > .profile{
+    /* 정사각형 만들고 둥근모서리 : 타원 */
+    width: 200px; height: 200px;
+    border-radius: 100px;
+    margin: 20px 0px;
+}
+/* 간단한 소개 */
+.info > .content{
+    margin: 10px 0px;
+}
+/* 링크 구역 */ 
+.info > .linkbox > div{
+    background-color: skyblue;
+    margin: 20px auto; /* 위/아래 = 20 , 왼/오른쪽=자동*/
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+a{ /* 일반적으로 a태그 링크 기능 목적으로 CSS 기본값 제거 */
+    text-decoration: none; /* 밑줄 제거 */
+    font-weight: bold;
+    color: white;
+}
+

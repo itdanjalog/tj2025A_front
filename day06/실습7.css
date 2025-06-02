@@ -1,0 +1,125 @@
+/* =========== 공통 CSS ============ */
+*{ padding: 0px; margin: 0px; } /* 기본 여백 제거 */
+*{ box-sizing: border-box; } /* 구역 사이즈를 테두리까지 기준 */
+a{ 
+    text-decoration: none; /* 밑줄제거*/
+    color: black; /* 색상변경 */
+}
+li{ list-style-type: none;}  /* li 마크업의 글머리제거 */
+/* =========== 헤더 CSS ============ */
+#header{ /* id를 선택할때는 #id명 */
+    /* 하위 요소 배치 방법 : 크롬의 개발자도구(f12) 활용 권장 */
+    display: flex; 
+    flex-direction: row; /* 가로배치 : 생략가능*/
+    justify-content: space-between; /* 균등 가로 정렬*/
+    align-items: center; /* 세로 가운데 정렬 */
+    /* 해당 요소 가운데 정렬 */
+    width: 1280px;      /* 가로 사이즈 */
+    margin:  15px auto;    /* 구역 가로 가운데 자동 정렬 */
+}
+.top-menu{ /* class를 선택할때는 .class명 */
+    display: flex; justify-content: flex-end;
+}
+.main-menu{
+    display: flex; justify-content: flex-end;
+}
+.main-menu > li{ /* > : 하위요소 선택자 */
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0px 30px 100px;    /* 시계방향으로 위 , 오른쪽 , 아래 , 왼쪽 */
+}
+/* =========== 본문 CSS ============ */
+#main-img > img{   width: 100%; }
+#main{
+    display: flex;
+    justify-content: space-between;
+    width: 1280px;
+    margin: 30px auto;
+}
+.sidebar{ width: 250px; }
+.content{ 
+    display: flex; justify-content: space-between;
+    width: 1000px; 
+}
+.content > .leftbox{ width: 490px; }
+.content > .rightbox{ width: 490px; }
+/* =========== (사이드바) 본문 CSS ============ */
+.sidebar > .title{
+    background-color: #0ca9a2;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+.sidebar > .comment{
+    line-height: 160%; /* 줄간격 */
+    padding: 5px;
+}
+.sidebar > .searchbox > .search-input{
+    width: 180px; height: 30px;
+    border-radius: 10px; /* 둥근모서리 */
+    padding: 1px 7px; 
+}
+.sidebar > .searchbox > .search-btn{
+    padding: 4px 10px; /* 안쪽 여백 넣어줌으로써 버튼크기 수정*/
+}
+.sidebar > .searchbox { margin: 10px 0px;}
+.sidebar > .sub-title{
+    border-top: solid 2px black; /* 위쪽 테두리 */
+    border-bottom: solid 1px #eeeeee; /* 아래쪽 테두리 */
+    margin-top: 30px;
+    font-size: 18px;
+    padding: 10px;
+}
+.sidebar > .sub-menu > li{ padding: 5px 10px; }
+
+/* =========== ( 왼쪽 내용) 본문 CSS ============ */
+.content .sub-title{ /* 선택자 자손선택자 */
+    border-bottom: solid 2px black;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.content > .leftbox > .board > li{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0px;
+}
+.content > .leftbox > .board {
+    margin-bottom: 50px;
+}
+/* =========== ( 오른쪽 내용) 본문 CSS ============ */
+.content > .rightbox > .product-list{
+    display: flex;
+    /* 만약에 하위요소들이 부모요소보다 커지면 자동 줄바꿈*/
+    flex-wrap: wrap;
+}
+.content > .rightbox > .product-list > .product{
+    width: 240px;
+    margin-bottom: 30px;
+}
+
+/* =========== 푸터 CSS ============ */
+#footer{
+    background-color: #05344e;
+    color: white; padding: 20px 0px;
+}
+.footer-inner{
+    width: 1280px; margin: 0 auto;
+}
+.footer-inner > .ftop-menu{
+    display: flex;
+    margin-bottom: 30px;
+}
+.footer-inner > .ftop-menu > li{ margin-right: 40px; }
+.footer-inner > .fbottom-menu{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.footer-inner > .fbottom-menu .footer-title{
+    margin-bottom: 10px;
+}
+.footer-inner > .fbottom-menu li{
+    margin: 5px 0px;
+}
+
+

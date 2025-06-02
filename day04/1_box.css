@@ -1,0 +1,80 @@
+/* CSS 주석 처리 */
+
+/* 1. 모든 구역의 테두리 */
+*{
+    border : solid 3px red; /* 대상의 테두리 */
+    padding : 10px ; /* 안쪽여백*/
+}
+/* 2. */
+.구역1{ /* .클래스명{ 속성명 : 값; } */
+    /* 테두리(순서상관없음) : 선종류 굵기 색상 */
+    /* 선종류 : solid(실선) */
+    border-top : solid 1px orange; /* 상단 테두리 */
+    border-right : dotted 2px blue; /* 오른쪽 테두리 */
+    border-bottom: dashed 3px black; /* 아래 테두리*/
+    border-left: double 4px green; /* 왼쪽 테두리 */
+    /* 둥근 모서리 : 둥근정도 px */
+    border-radius : 20px;
+    /* 그림자 : x축 y축 흐림정도 색상 */
+    box-shadow: 3px 3px 5px orange;
+    /* 가로 가운데정렬 */
+    text-align: center; /* 현재 선택자의 구역이 정렬 되는게 아니라. 내용물이 정렬*/
+    width : 500px ; /* 구역 가로 사이즈 : 만일 생략시 기본값은 100% */
+    height : 500px ;/* 구역 세로 사이즈 */
+}
+/* 3. 이미지 가로 사이즈 변경 */
+img{ width : 150px ;}
+.구역2{ text-align: center; } /* 이미지 정렬시 주의할점 */
+
+/* 4. input 마크업 CSS */
+input{ 
+    width: 200px; height: 30px; /* 가로 세로 사이즈 */
+    border : 1px solid gray; /* 테두리 */
+    border-radius: 10px; /* 둥근모서리 */
+}
+form{ text-align: right; }
+
+/* 5. 여백(빈공간) : ( 기준:테두리 ) 1. 안쪽여백 2.바깥여백 */
+.구역3{
+    padding : 50px; /* 안쪽여백*/
+    margin : 70px ; /* 바깥여백*/
+}
+.구역4{
+    width: 100px;
+    /* 안쪽여백 */
+    padding-top: 20px; /* 위 안쪽 여백 */
+    padding-right: 30px; /* 오른쪽 안쪽 여백 */
+    padding-bottom: 40px; /* 아래쪽 안쪽 여백 */
+    padding-left: 50px; /* 왼쪽 안쪽 여백 */
+    /* 바깥여백 */
+    margin-top: 50px;       /* 위 바깥 여백 */
+    margin-right: 40px;     /* 오른쪽 바깥 여백 */
+    margin-bottom: 30px;    /* 아래쪽 바깥 여백 */
+    margin-left: 20px;      /* 왼쪽 바깥 여백 */
+}
+.구역5{
+    /* padding , margin 동일 */
+    padding: 20px 30px 40px 50px; /* 위 오른쪽 아래 왼쪽 */
+    padding: 20px 30px; /* 위/아래=20   오른/왼쪽=30 */
+    padding: 20px; /* 위/아래/오른/왼쪽=20 */
+}
+.구역6{
+    /* margin : 0 auto; : 구역 가로 가운데 정렬 */
+    width: 200px; /* 100% 또는 생략시에는 정렬 불가능 */
+    text-align: center; /* 구역이 아니라 구역내 내용물 정렬 */
+    margin: 0 auto; /* 왼쪽/오른쪽 바깥여백을 auto 해서 구역 가로 가운데*/
+    color:  white; /* 글꼴 색상 */
+    background-color: black; /* 구역(배경)색상 */
+}
+
+
+
+
+
+
+
+
+
+
+
+

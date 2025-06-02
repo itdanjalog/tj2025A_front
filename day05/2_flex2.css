@@ -1,0 +1,46 @@
+.box{
+    background-color: black;
+    color: white;
+    width: 100px;
+}
+.container{
+    display: flex; /* 하위 요소들의 배치방법*/
+    border : 2px solid red;
+}
+#flexbox1{ justify-content: flex-start ;} /* 왼쪽 정렬 */
+#flexbox2{ justify-content: flex-end; } /* 오른쪽 정렬 */
+#flexbox3{ justify-content: center; } /* 가운데 정렬 */
+/*양쪽 끝에 여백 없이 사이 여백을 균등 정렬*/
+#flexbox4{ justify-content: space-between; }
+/*양쪽 끝에 여백은 사이 여백의 50% 하고 사이 여백을 균등 정렬*/
+#flexbox5{ justify-content: space-around;} 
+/*양쪽 끝에 여백과 사이 여백을 균등 정렬*/
+#flexbox6{ justify-content: space-evenly; }
+
+#flexbox7{
+    border: 1px solid red;  width: 200px;
+    display: flex; 
+    align-items: stretch;
+    /* 자식요소들은 고정 크기가 없으면 자동으로 부모요소의 높이만큼 늘어남*/
+}
+#flexbox8{
+    border : 1px solid red; width: 200px;
+    display: flex;
+    align-items: center;
+    /* 자식요소들은 부모 요소의 세로 가운데 정렬 */
+}
+#flexbox9{
+    border: 1px solid red; width: 200px;
+    display: flex;
+    align-items: flex-start;
+    /*자식요소들은 부모 요소의 윗변/상단 정렬 vs stretch */
+}
+#flexbox10{
+    border: 1px solid red; width: 200px;
+    display: flex;
+    align-items: flex-end;
+    /*자식요소들은 부모 요소의 밑변/하단 정렬 */
+}
+.box1{ width: 50px; height: 50px;}
+.box2{ width: 100px; height: 100px; }
+.box3{ width: 50px; }

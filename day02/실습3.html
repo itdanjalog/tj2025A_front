@@ -1,0 +1,37 @@
+<!-- 파일의 1번줄에서 ctrl+스페이바 -> [html sample] -->
+<!-- HTML 실행 : 해당 파일 오른쪽 클릭 -> [open with live Server] -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title> 실습3 </title>
+    </head>
+    <body>
+        <!-- 1. 제목 -->
+        <h3> 달력 만들기 </h3>
+
+        <!-- 2. 버튼과 날짜입력-->
+        <input type="button" value="<" />
+        <input type="month" /> 
+        <button type="button"> > </button>
+
+        <!-- 3. 테이블 -->
+        <table border="1"> <!-- 전체 테이블 감싼 마크업 , 테두리속성 : border="1" -->
+            <tr> <!-- 1행-->
+                <th colspan="7"> 2023년 1월 </th> <!-- 열 병합-->
+            </tr>
+            <tr> <!-- 2행 -->
+                <th> 일 </th> <th> 월 </th> <th> 화 </th> <th> 수 </th>
+                <th> 목 </th> <th> 금 </th> <th> 토 </th> <!-- 7개 제목 -->
+            </tr>
+            <tr> <!-- 3행 -->
+                <td> 1 </td> <td> 2 </td> <td>3 </td> <td>4</td>
+                <td> 5 </td> <td> 6 </td> <td>7 </td>
+            </tr>
+            <!-- 4행 -->
+            <!-- 5행 -->
+            <!-- 6행 -->
+            <!-- 7행 -->
+        </table>
+    </body>
+</html>

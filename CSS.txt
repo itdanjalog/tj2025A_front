@@ -1,0 +1,101 @@
+HTML : 마크업 언어 ex] 사람 뼈대
+CSS : 스타일 언어  ex] 사람 옷 
+JS : 객체지향 언어 ex] 사람 동작/이벤트 
+[ CSS ] 
+    - Cascading Style Sheets 
+    1. 위에서 아래로 꾸미기 시트를 덮는다. ( 대상은 마크업 )
+    2. 주로 HTML언어를 꾸미는 목적으로 사용
+    3. CSS는 (HTML)종속형 스타일언어, 즉] HTML안에서 실행된다.
+
+[ CSS 적용방법 ]
+    방법1 
+        <마크업명 style="속성명:값; 속성명:값; "/>
+    방법2
+        <head>
+            <style>
+                선택자{ 속성명:값; 속성명:값; }
+            </style>
+        </head>
+    *방법3* : 협업간의 유지보수 유용
+        * CSS확장자 파일내에서 
+            선택자{ 속성명:값; 속성명:값; }
+        * HTML에서 CSS확장자 파일 불러오기 
+            <head>
+                <link href="CSS파일경로" rel="stylesheet" />
+            </head>
+    *브라우저 임시 테스트 : 브라우저에서 F12(개발자도구)
+[ CSS 주석 ]
+    - CSS : /* 주석처리 */  
+    - HTML : <!-- 주석처리 -->
+    
+[CSS 구조]
+    선택자{ 속성명 : 값 ; }
+
+[CSS 선택자]
+    1. *            : 전체 선택자   ( 공통 css 적용 )
+    2. 마크업명     : 마크업 선택자
+    3. .클래스      : 클래스 선택자 ( 복수 )
+    4. #아이디      : 아이디 선택자 ( 단일 )
+    - 만일 속성이 중복일때 우선선위
+        #id > .class > 마크업명 > *
+    - 그외 중복일때는 코드작성순으로 마지막 코드의 속성이 적용
+    - 관례적(일반적)으로 최대한 클래스 선택자 활용하고 특정한 부분 에서 id선택자 적용한다.
+    - 여러개 선택자를 한번에 적용 : ,쉼표 이용한 다중 선택자
+        - 선택자A , 선택자B{ 속성명 : 값; }
+    - 자식 선택자 : > 이용한 자식 선택자
+        - 부모선택자 > 자식선택자{ }
+    - 자손 선택자 : 띄어쓰기 이용한 자손 선택자
+        - 부모선택자 자손선택자{ }
+
+[ CSS 텍스트 속성 ]
+    1. font-family
+    2. font-size
+    3. font-style: italic;
+    4. font-weight
+    5. color
+    6. word-spacing
+    7. letter-spacing
+    8. line-height
+    9. text-align
+    10. text-decoration 
+    11. text-shadow
+    ----------------
+    12. border
+    13. border-radius
+    14. box-shadow
+    15. width
+    16. height
+    17. padding
+    18. margin
+        margin: 0 auto ;
+    19. background-color
+    20. display :
+            1. inline
+            2. block 
+            3. inline-block 
+            4. none
+            5. flex
+    21. box-sizing
+
+[ flex ]
+    - *하위 요소들의 배치 방법
+    1. flex-wrap
+        1. nowrap(기본값)   : 하위 요소들의 크기가 더 크면 자동으로 크기 맞춤
+        2. wrap            : 하위 요소들의 크기가 더 크면 자동으로 줄바꿈 
+    2. flex-direction       
+        1. row(기본값)      : 하위 요소들의 가로 방향 배치
+        2. column           : 하위 요소들의 세로 방향 배치
+    3. justify-content
+        1. flex-start(기본값): 가로 왼쪽 정렬 
+        2. flex-end         : 가로 오른쪽 정렬 
+        3. center           : 가로 가운데 정렬
+        4. space-between    : 양쪽 여백끝에 여백없이 사이 여백 균등 정렬
+        5. space-around     : 양쪽 여백끝에 사이여백50%하고 사이 여백 균등 정렬
+        6. space-evenly     : 양쪽 여뱌갹과 사이여백 균등 정렬
+    4. align-items
+        1. stretch(기본값)   : 하위 요소들의 세로크기가 고정이 아니면 자동으로 부모 세로크기만큼 늘어남
+        2. center           : 세로 가운데 정렬
+        3. flex-end         : 세로 밑변 정렬 
+        4. flex-start       : 세로 윗변 정렬
+        
+

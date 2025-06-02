@@ -1,0 +1,26 @@
+
+/* 누구를{ 무엇을 : 어떻게} */
+
+/* img{ } vs .bookimg */
+.bookimg{
+    width : 300px ; /* 이미지의 가로 사이즈*/
+}
+.title{
+    font-size: 20px; /* 글꼴 크기 */
+    font-weight: bold; /* 글꼴 굵게 */
+    margin: 20px 0px 15px 2px ; /* 바깥여백 위=20 오=0 아=15 왼=2 */
+}
+.point1{
+    color: orange; /* 글꼴 색상 */
+    font-size: 35px; /* 글꼴 크기 */
+}
+.content{
+    background-color: #0f6878;
+    color: white;
+    padding : 25px 20px; /* 안쪽 여백 */
+    line-height: 160%; /*줄간격*/
+    width: 500px ; /* 구역 가로 사이즈 */
+}
+.point2{ color: orange; }
+
+
