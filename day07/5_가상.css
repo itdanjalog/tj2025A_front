@@ -1,0 +1,48 @@
+/* 1. 경계선 CSS */
+.divider{
+    display: flex;
+    align-items: center; /* 수직 중앙 정렬*/
+    width: 400px;
+}
+.divider::before , .divider::after { /*  선택자A,선택자B  */
+    content: ""; /* 가상요소에는 빈 문자열 */
+    width: 100px;
+    height: 1px; /* 선 굵기*/
+    background-color: gray;
+    margin: 0px 10px;
+}
+/* 2. 드롭다운 메뉴1 CSS */
+li{ list-style-type: none; }
+#header{ background-color: beige; }
+#header > ul{ display: flex; justify-content: center; }
+#header > ul > li{
+    padding: 20px;
+    position: relative;
+}
+#header .subMenu{
+    position: absolute;
+    top: 50px; left: 0px; /* 본메뉴 바로 50px 아래 */
+    background-color: red;
+    padding: 10px;
+    display: none; /* 화면에 표시하지 않는다. */
+}
+/* 만약에 해당 메뉴를 hover 했을때 서브메뉴(드롭다운) 열기 
+    -> .menu를 hover 했을때 .subMenu에 CSS 적용 
+*/
+#header > ul > .menu:hover .subMenu{ display: block; }
+
+/* 3. 드롭다운 메뉴2 CSS */
+*{ padding: 0px; margin: 0px; }
+#header2{ background-color: skyblue; }
+#header2 > ul { display: flex; justify-content: center; }
+#header2 > ul > li{ padding: 10px; }
+#header2{ position: relative;}
+#header2 .subMenu2{
+    position: absolute; /* 가장가까운 상위요소의 relative갖는 요소 기준점 */
+    top: 40px;
+    width: 100%; /*전체사이즈*/
+    background-color: skyblue;
+    display: none; /* hover 되기전에는 숨기기 */
+}
+/* 만약에 메뉴 구역을 hover 했을때 서브메뉴 열기 */
+#header2 > ul:hover .subMenu2{ display: block; }
