@@ -1,0 +1,32 @@
+
+
+/* 1. 부모요소 */
+.parent{
+    width: 700px; height: 450px;
+    background-color: red;
+    margin: 0 auto;
+    position: relative; /* 하위 요소의 absolute속성값 기준 설정 */
+}
+/* 2. 자식요소 */
+.box{
+    width: 100px; height: 70px;
+    background-color: yellow;
+    border-radius: 10px;
+    /* 하위요소 가로/세로 가운데 */
+    display: flex;
+    justify-content: center; align-items: center;
+    position: absolute; /* 가장 가까운 상위 요소의 relative속성값을 가진 상위 요소 기준 */
+}
+/* 3. 각 자식요소별 위치 */
+.box1{ left: 300px; top:50px; }
+.box2{ left: 150px; top:120px; }
+.box3{ left: 450px; top:120px; }
+.box4{ left: 150px; top:260px; }
+.box5{ left: 450px; top:260px; }
+.box6{ left: 300px; bottom:50px ;}
+
+
+
+
+/* left/right/top/bottom 속성은 position:static(기본값) 속성에서 사용불가능 */
+

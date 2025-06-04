@@ -16,7 +16,7 @@
     justify-content: space-between;
     background-color: yellow;
     position : sticky ;
-    /* position : sticky 지정한 요소의 구역이 스크롤 밖으로 나갔을때 위치 고정  */
+    /* position : sticky(여간해서 움직이지 않는) 지정한 요소의 구역이 스크롤 밖으로 나갔을때 위치 고정  */
     top : 0px;  /* 고정 위치 */
     z-index: 3;
 }
