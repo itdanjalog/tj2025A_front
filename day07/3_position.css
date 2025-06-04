@@ -24,9 +24,5 @@
 .box4{ left: 150px; top:260px; }
 .box5{ left: 450px; top:260px; }
 .box6{ left: 300px; bottom:50px ;}
-
-
-
-
 /* left/right/top/bottom 속성은 position:static(기본값) 속성에서 사용불가능 */
 
