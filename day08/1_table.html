@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='1_table.css'>
+</head>
+<body>
+
+    <h1> 테이블 꾸미기1 </h1>
+    <table class="basicTable">
+        <tr> <!-- tr 행 추가 -->
+            <th> 번호 </th> <th> 이름 </th> <!-- th 열제목 -->
+            <th> 국어 </th> <th> 영어 </th>
+            <th> 수학 </th> <th> 평균 </th>
+        </tr>
+        <tr>
+            <td> 1 </td>    <td> 김민준 </td> <!-- td 데이터셀 -->
+            <td> 85 </td>   <td> 90 </td>
+            <td> 78 </td>   <td> 84.3 </td>
+        </tr>
+        <tr>
+            <td> 2 </td>    <td> 이서아 </td> 
+            <td> 85 </td>   <td> 90 </td>
+            <td> 78 </td>   <td> 84.3 </td>
+        </tr>
+        <tr>
+            <td> 3 </td>    <td> 박도윤 </td>
+            <td colspan="2"> 미응시 </td>    <!-- colspan속성 : 열병합 -->
+            <td> 78 </td>   <td> 84.3 </td>
+        </tr>
+        <tr>
+            <td colspan="2"> 총 응시 인원 : </td>
+            <td colspan="4"> 3명( 1명 일부 과목 미응시) </td>
+        </tr>
+    </table>
+
+</body>
+</html>

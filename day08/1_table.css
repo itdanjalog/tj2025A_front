@@ -1,0 +1,35 @@
+/*
+    [선택자]
+        1. . (vs) # (vs) 마크업 (vs) *
+        2. 띄어쓰기 (vs) > (vs) ,  
+    [ 형제 선택자 ] : 자식 선택자가 다수 일때 
+        - 부모선택자 자식선택자명:nth-child(순번)
+    [ 속성 선택자 ] : 선택자가 지정된 HTML속성명 가질때 
+        - 선택자[HTML속성명]
+*/
+
+/* 테이블 꾸미기1 */
+.basicTable{
+    width: 500px;
+    border: 1px solid red ;
+}
+.basicTable th , .basicTable td{
+    border : 1px solid red;
+    padding: 5px;
+}
+/* 형제 선택자 */
+.basicTable td:nth-child(1){ background-color: aqua; }  
+    /* 테이블 마크업의 td자식들중에 첫번째 자식에 배경색 */
+.basicTable td:nth-child(3),
+.basicTable td:nth-child(4),
+.basicTable td:nth-child(5),
+.basicTable td:nth-child(6){ text-align: right; }
+    /* 3,4,5,6 열은 텍스트를 오른쪽 정렬 */
+
+/* 속성 선택자 */
+.basicTable td[colspan]{     text-align: center; }
+    /* td중에 'colspan' 속성을 가진 선택자 */
+.basicTable tr:nth-child(5) > td[colspan]{
+    background-color: bisque;
+}
+
