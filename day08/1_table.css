@@ -2,8 +2,11 @@
     [선택자]
         1. . (vs) # (vs) 마크업 (vs) *
         2. 띄어쓰기 (vs) > (vs) ,  
+
     [ 형제 선택자 ] : 자식 선택자가 다수 일때 
-        - 부모선택자 자식선택자명:nth-child(순번)
+        - 부모선택자 자손선택자명:nth-child(순번)
+        - 부모선택자 자손선택자명:nth-of-type(even또는odd) 
+
     [ 속성 선택자 ] : 선택자가 지정된 HTML속성명 가질때 
         - 선택자[HTML속성명]
 */
@@ -12,6 +15,7 @@
 .basicTable{
     width: 500px;
     border: 1px solid red ;
+    
 }
 .basicTable th , .basicTable td{
     border : 1px solid red;
@@ -33,3 +37,23 @@
     background-color: bisque;
 }
 
+/* 테이블 꾸미기2 */
+.styleTable{
+    width: 700px;
+    border-collapse: collapse; /* 이중테두리 없애기*/
+}
+.styleTable > thead > tr > th{
+    background-color: blue;
+    color: white; font-weight: bold;
+}
+/*
+    :nth-of-type(odd) : 형제들 중에 홀수 
+    :nth-of-type(even) : 형제들 중에 짝수 
+*/
+.styleTable > tbody tr:nth-of-type(odd){
+    background-color: #eeeeee;
+}
+.styleTable > tbody tr:hover{
+    background-color: gray; color: white;
+}
+.styleTable td , .styleTable th { padding: 10px; }
