@@ -1,0 +1,36 @@
+
+/* 1. 이미지 object-fit */
+.imgBox{
+    width: 300px; height: 300px;
+    border: 2px solid red;
+}
+.imgBox img{
+    /* 100% : 상위 요소의 크기에서 100% 
+    즉] 상위요소가 300px이면 지정된 요소도 300px */
+    width: 100%; height: 100%;
+}
+.img1{
+    object-fit: fill; /* (기본값/생략가능) : 비율 무시하고 구역요소 채움 */
+}
+.img2{
+    object-fit: contain; /* 비율유지 , 요소 안에 모두 표시 */
+}
+.img3{
+    object-fit: cover; /* 비율유지 , 요소 채움(잘림 가능) */
+}
+.img4{
+    object-fit: none; /* 크기 조절없이 원본 크기 그대로 (잘림 가능) */
+}
+/* 2. 이미지 object-position */
+.img5{
+    object-fit: cover;
+    object-position: left; /* 만일 잘린 부분이 있을경우 위치를 이동*/
+}
+.img6{
+    object-fit: contain;
+    object-position: top; /* 위로 이동 */
+}
+.img7{
+    object-fit: contain;
+    object-position: right; /* 오른쪽 이동 */
+}                           

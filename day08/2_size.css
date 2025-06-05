@@ -28,3 +28,25 @@
     max-height: 100px; /* 최대 세로 사이즈 100px 설정 */
     /* 즉] 내용의 높이가 100px 보다 커지면 100px 고정 , 작으면 100% */
 }
+
+/* 2. overflow : 지정요소보다 하위요소 크기가 더 커졌을때 */
+.overflow > div{
+    width: 200px; height: 100px;
+    background-color: beige;
+}
+.overflow :nth-child(2){
+    overflow: visible; /* (기본값) 내용이 넘치면 그대로 보여줌 */
+}
+.overflow :nth-child(4){
+    overflow: hidden; /* 내용이 넘치면 잘라내고 숨김 */
+}
+.overflow :nth-child(6){
+    overflow: scroll; /* 항상 스크롤바 표시 */
+}
+.overflow :nth-child(8){
+    overflow: auto; /* 내용이 넘칠때만 스크롤바 표시 */
+}
+.overflow :nth-child(10){
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
