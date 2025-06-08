@@ -1,0 +1,41 @@
+*{
+    /* 모든 여백 제거 */
+    padding: 0px; margin: 0px;
+}
+
+/* 1.배경색 넣기 */
+body{
+    background-color:pink ; /* 배경색 */
+    text-align: center; /* 가로 가운데 정렬 */
+}
+/* 2. 제목 구역 */
+.info > .title{
+    font-size: 20px;
+    border: 3px solid white;
+    border-radius: 50px; /* 모서리 둥글게 */
+    width: 300px;
+    padding: 10px; 
+    font-weight: bold;
+    margin: 30px auto ; /* 구역 가로 가운데 배치 */
+}
+/* 3. 사진 구역 */
+.info > .logo > img{
+    width: 200px; height: 200px; /* 정사각형 */
+    border-radius: 100px; /* 정사각형 크기의 모서리 궁글게 => 원*/
+}
+/* 4. 코멘트 구역 */
+.info > .content{  margin: 20px; } 
+/* 5. 링크 구역 */
+.info > .linkbox > .link{
+    background-color: skyblue;
+    width: 300px;
+    margin: 15px auto;  /* 위/아래=10 , 왼/오=오토(가로가운데) */
+    padding: 20px;      
+    border-radius: 10px;    
+}
+/* 6. a 마크업 */
+.info > .linkbox > .link > a{
+    font-weight: bold;
+    color: white;
+    text-decoration: none ; /* 밑줄 사용 안함 */
+}

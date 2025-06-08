@@ -1,0 +1,29 @@
+
+*{ /* 전체 선택자 = 모든 구역 공통 부문 */
+    font-family: '맑은 고딕'; /* 글꼴 */
+    font-size: 15px;    /* 글꼴 크기 */
+}
+/* 1. 이미지 정렬 */
+.top{ text-align: left; } 
+/* 2. 이미지 가로 사이즈 */
+.top > img{ width: 300px; }
+/* 3. 구역간 바깥여백 */
+.bottom{ margin: 20px 0px;  }
+/* 4. 제목 구역 */
+.title{
+    font-weight: bold;
+}
+/* 5. 내용 구역 */
+.content{
+    background-color : #0f6878 ; /* 배경색*/
+    color: white; /* 글꼴 색상 */
+    padding: 15px 20px; /* 안쪽 여백 */
+    line-height: 160%; /* 줄간격 */
+    width: 500px;
+}
+.point1 , .point2 {
+    color: orange;
+}
+.point1{
+    font-size: 25px;
+}
