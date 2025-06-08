@@ -1,0 +1,38 @@
+
+*{ /* 전체 선택자 */
+    /* 기본 여백값 모두 제거  */
+    padding: 0px; margin: 0px;
+}
+/* 1. 하나의 제품 구역 */
+.product{
+    border : 1px solid #eeeeee ; /* 테두리 */
+    width : 350px; /* 구역 가로 사이즈 */
+    margin: 20px; /* 바깥여백 = 20 */
+}
+/* 2. 제품 상단 이미지 */
+.top > .pimg{ width: 350px; }
+/* 3. 제품 하단 */
+.bottom{
+    border-top: 1px solid #eeeeee;
+    padding : 20px 10px 10px 10px  ; /* 안쪽 여백 */
+}
+/* 4. 제품 하단 정보들 */
+.bottom > .name{
+    font-size: 20px;  
+    font-weight: bold; /* 진하게 */ 
+}
+.bottom > .price{
+    font-weight: bold;
+    margin-top: 15px;
+}
+.bottom > .content{ 
+    margin-top: 15px;
+    line-height: 160%;
+}
+.bottom > .review{
+    margin-top: 15px;
+}
+.bottom > .review > .orange{
+    color: orange;
+    font-weight: bold;
+}

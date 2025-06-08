@@ -1,0 +1,66 @@
+/* 작업용 : 작업 완료 작성할 예정 */
+/* *{ border: 1px solid red; } */
+/* ======== 공통 부문 ======== */
+*{ margin: 0px; padding: 0px; } 
+*{ box-sizing: border-box;} /* 사이즈기준을 컨텐츠+안쪽여백+테두리*/
+li{ list-style-type: none; } /* li 마크업의 글머리 제거 */ 
+a{ text-decoration: none; color: black; } /* a마크업의 밑줄제거 , 색상 검정 */
+
+/* ======== 헤더 부문 ======== */
+#header{ 
+    width: 1280px;  margin: 0 auto; /* 박스/모델 구역 가로 가운데 정렬*/
+    display: flex;  /* 하위 요소들을 배치방법 속성 */
+    justify-content: space-between; /* 하위 요소들을 양쪽끝에 균등 가로 정렬 */
+    align-items: center; /* 하위 요소들을 세로 정렬 */
+}
+/*상단메뉴*/
+#topmenu{ 
+    display: flex; justify-content: flex-end; 
+    margin: 20px 0px; font-size: 10px; 
+}
+#topmenu > li{ margin-left: 20px; }
+/*하단 메뉴*/
+#mainmenu{ 
+    display: flex; justify-content: flex-end; 
+    margin: 30px 0px; font-size: 20px; font-weight: bold;
+}
+#mainmenu > li{ margin-left: 70px;}
+
+/* ======== 대표 이미지 부문 ======== */
+#mainimg{ width: 100%; } /* 이미지 사이즈를 100% = 비율 = 디바이스(화면)의 전체 차지/
+
+/* ======== 본문 부문 ======== */
+#main{
+   width: 1280px; margin: 30px auto;
+   display: flex; justify-content:  space-between;
+}
+#aside{ width: 250px; } /* 1280(부모) 에서 250(자식1) 사용 */
+#aside > h3{
+    background-color: gray; color: white;
+    font-size: 20px; padding: 10px; /* 적절한 여백과 글꼴 크기 */
+}
+#aside > ul > li{ 
+    padding: 10px; border-bottom : 1px solid #eeeeee  ; /* 아래쪽 테두리 */
+}
+#content{ width: 1000px ; } /* 1280(부모) 에서 1000(자식2) 사용 , 30px(여백) 남는다.*/
+#content > h3{
+    font-size: 20px; 
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 20px ; margin-bottom: 20px; /* 아래 테두리 위/아래 여백 */
+}
+#content > img{
+    /* img 마크업은 display 기본값이 inline( 여백이 좌우만 가능 ) */ 
+    display: block;  margin: 0 auto; /* img 마크업을 block 으로 변경후 margin 사용 */
+}
+
+/* ======== 푸터 부문 ======== */
+#footer{
+    background-color: #2c2a29;
+}
+#footermain{
+    width: 1280px; margin: 0 auto;
+    color: white;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+}

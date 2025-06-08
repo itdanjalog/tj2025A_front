@@ -1,0 +1,12 @@
+URL : 인터넷상의 HTML이 위치한 서버 경로
+    쿼리스트링 : query(질의)스트링(문자열)
+    - 형태 : URL?매개변수명=인수값&매개변수명2 =인수값2
+    - 목적 : 서로 다른 페이지 이동간의 데이터를 전달할수 있다.
+    - 오픈형이므로 개인정보는 불가능하고 간단한 식별자코드를 주고 받는데 사용된다. 
+    - 예] 네이버 증권 게시판 페이지 
+    https://finance.naver.com/item/board_read.naver?code=263750&nid=29400805
+        - 구분
+    https://finance.naver.com/item/board_read.naver : 현재 HTML 위치한 서버경로 
+    ?code=263750&nid=29400805 : 쿼리스트링 구역 
+    - code : 종목코드
+    - nid : 게시물번호/코드
