@@ -126,7 +126,8 @@ let 점수1차 = Number( prompt("1차점수:") );    // *변수명은 숫자로 
 let 점수2차 = Number( prompt("2차점수:") );    // prompt 는 항상 문자열로 반환/결과 준다. 
 let 총점 = 점수1차 + 점수2차;
 let result = 총점 >= 150 ? "합격" : "불합격" ; // 논리는 항상 true와 false로 답한다. 삼항 또는 조건문
-console.log( `결과 : ${ result }`);            // true 대신에 '합격' , false 대신에 '불합격'
+console.log( `결과 : ${ result }`);           // (콘솔출력) true 대신에 '합격' , false 대신에 '불합격'
+document.write( `<h3> ${ result } </h3>`);   // (HTML출력)
 
 // [지문9] 두 사람의 이름을 prompt함수로 각 입력받아서 만일 이름이 '유재석' 이면 뒤에 (방장) 이라고 이름 뒤에 붙이고 아니면 생략한다.  HTML의 <ol> 에 결과를 출력하시오.
 let 이름 = prompt("이름 : ");
