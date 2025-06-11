@@ -50,5 +50,3 @@ let todoList = [ "장보기" , "과제하기" ]; // 배열 : [ ] ,  변수 : let
 let todo = prompt("새로운 할일 입력하세요"); // 입력받기 , 입력받고 입력받은 값으로 다음 행동(목록[배열]저장)이 필요하므로 저장(기억)!!
 todoList.push( todo );  // 입력받은 값을 배열 추가 
 console.log( todoList ); // 배열 전체 요소 출력
-
-
