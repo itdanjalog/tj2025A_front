@@ -57,7 +57,7 @@ else if( 10 > 10 ){ console.log( "[4] 10은 10보다 크다"); }     // false
 else{ console.log( "[4] 그외 이다. " ); }                       // 
 
 // [5] 중첩 
-let 성별 = "남"; let 점수 = 80;
+let 성별 = "남"; let 점수 = 80; // 임의 값 
 if( 성별 == "남" ){
     if( 점수 >= 90 ){ console.log("남자우수"); }
     else{ // 90 이상이 아니면 90미만으로 가정
