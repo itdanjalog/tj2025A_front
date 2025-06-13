@@ -47,16 +47,13 @@ for( let line = 1 ; line <= 5 ; line++ ){ //console.log( "------------줄-------
     }
 }// for 줄 
 console.log( output );
-/*문제 3: 배열에서 특정 문자 찾기 (break 활용)
-다음 사용자 이름 배열에서 이름에 '솔' 이라는 글자가 들어간 첫 번째 사용자를 찾으면, 해당 사용자의 이름을 출력하고 반복문을 종료하시오.
-let userNames = ['김하준', '이서아', '박솔민', '최도윤'];
-힌트: 문자열의 .indexOf() 메소드를 사용하세요.*/
+
+/*문제 3: 배열에서 특정 문자 찾기 (break 활용)  */
 // 배열내 -> 하나의 요소/값/문자열 -> 솔이 포함.  // 김하준(문자열)은 배열의 기반으로 만들어진 자료이다.
 // (1) 모든 배열의 이름들을 *하나씩: 0 ~ 마지막까지 1씩* 꺼낸다. < 배열 순회 >
 let userNames = [ '김하준', '이서아', '박솔민', '최도윤'];
 for( let index = 0 ; index <= userNames.length - 1 ; index++ ){
-    let name = userNames[index]; // index 번째의 이름 꺼낸다.
-    // console.log( name ); 
+    let name = userNames[index]; // index 번째의 이름 꺼낸다. // console.log( name ); 
     // (2) 이름의 '솔' 포함된 
     if( name.indexOf('솔') != -1 ){  console.log( name )  } 
 } // for end 
@@ -65,9 +62,22 @@ for( let index = 0 ; index <= userNames.length - 1 ; index++ ){
 
 /*문제 4: 2차원 배열의 모든 요소 출력하기
 다음과 같은 2차원 배열(좌석표)이 있습니다. 중첩 for 반복문을 사용하여 모든 좌석의 값을 순서대로 출력하시오.
-let seatLayout = [['A1', 'A2', 'A3'], ['B1', 'B2', 'B3'], ['C1', 'C2', 'C3']];
+let seatLayout = [['A1', 'A2', 'A3'], ['B1', 'B2', 'B3'], ['C1', 'C2', 'C3']]; */
+// 배열 출력X , 배열내 모든 요소 출력 
+let seatLayout = [['A1', 'A2', 'A3'], ['B1', 'B2', 'B3'], ['C1', 'C2', 'C3']]; 
+for( let i = 0 ; i <= seatLayout.length - 1 ; i++ ){
+    // 행 출력 
+    let row = seatLayout[i]; // i번째 배열(요소) 꺼낸다.
+    // console.log( row )
+    // 열 출력 
+    for( let j = 0 ; j <= row.length - 1 ; j++ ){
+        let column = row[j];
+        console.log( column );
+    } // for end 
+} // for end 
 
-문제 5: 배열의 중복 요소 제거하기
+
+/*문제 5: 배열의 중복 요소 제거하기
 주어진 배열에서 중복된 요소를 제거하고, 중복 없는 새로운 배열을 만들어 출력하시오.
 let numbers = [1, 5, 2, 3, 5, 1, 4, 2];
 힌트: 새로운 배열을 만들고, for 반복문으로 기존 배열을 순회하며 새로운 배열에 해당 요소가 없을( .indexOf() == -1 ) 때만 추가(push())합니다.
