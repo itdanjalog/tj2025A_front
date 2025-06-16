@@ -1,26 +1,24 @@
 ============================================ 예제 ============================================
-문제 1: 자기소개 객체 만들기
+예제 1: 자기소개 객체 만들기
 자신의 이름(name), 나이(age), 사는 곳(city)을 속성으로 갖는 person이라는 이름의 객체를 만들고, console.log()로 객체 전체를 출력하시오.
 
-문제 2: 객체의 값(Value) 출력하기
-다음과 같은 book 객체가 있습니다. 반복문을 사용하여 이 객체의 
-모든 값('Cracking the Coding Interview', 'Gayle Laakmann McDowell', 500)을 하나씩 콘솔에 출력하시오.
+예제 2: 객체의 값(Value) 출력하기
+다음과 같은 book 객체가 있습니다. 반복문을 사용하여 이 객체의 모든 값 을 하나씩 콘솔에 출력하시오.
 const book = {
   title: 'Cracking the Coding Interview',
   author: 'Gayle Laakmann McDowell',
   pages: 500
 };
 
-문제 3: 객체에 속성 추가 및 삭제하기
-person 객체에 이메일(email) 주소를 추가합니다.
-person 객체에서 나이(age) 속성을 삭제합니다.
+예제 3: 객체에 속성 추가 및 삭제하기
+person 객체에 이메일(email) 주소를 추가합니다. , person 객체에서 나이(age) 속성을 삭제합니다.
 최종적으로 수정된 person 객체를 콘솔에 출력하시오.
 const person = {
   name: '김코딩',
   age: 25,
 };
 
-문제 4: 객체 속성 값 계산하기
+예제 4: 객체 속성 값 계산하기
 다음 product 객체는 상품의 이름, 가격, 재고량을 나타냅니다. 이 객체의 총 자산 가치(가격 * 재고량)를 계산하여 콘솔에 출력하시오.
 const product = {
   name: '노트북',
@@ -28,7 +26,7 @@ const product = {
   stock: 50
 };
 
-문제 5: 대괄호 표기법 사용하기
+예제 5: 대괄호 표기법 사용하기
 다음 user 객체가 있습니다. 대괄호 표기법을 사용하여 job-title 속성의 값('개발자')을 콘솔에 출력하시오.
 const user = {
   name: '김코딩',
@@ -36,7 +34,7 @@ const user = {
 };
 
 
-문제 6: 중첩된 객체 다루기
+예제 6: 중첩된 객체 다루기
 다음 student 객체에서 학생이 사는 도시(city)의 이름('Seoul')을 콘솔에 출력하시오.
 const student = {
   name: '이학생',
@@ -47,7 +45,7 @@ const student = {
   }
 };
 
-문제 7: 객체에 특정 속성이 있는지 확인하기(  in 연산자 )
+예제 7: 객체에 특정 속성이 있는지 확인하기(  in 연산자 )
 character 객체에 level이라는 속성이 있는지 in 연산자를 사용하여 확인하고, 결과를 true 또는 false로 콘솔에 출력하시오.
 const character = {
   name: '전사',
@@ -55,7 +53,7 @@ const character = {
   mp: 50
 };
 
-문제 8: Object.keys()와 Object.values()
+예제 8: Object.keys()와 Object.values()
 country 객체의 모든 키(key) 들을 배열로 만들어 출력하고, 모든 값(value) 들을 또 다른 배열로 만들어 콘솔에 각각 출력하시오.
 const country = {
   name: '대한민국',
@@ -63,7 +61,7 @@ const country = {
   population: 51780000
 };
 
-문제 9: 객체와 조건문 활용하기
+예제 9: 객체와 조건문 활용하기
 다음 inventory 객체는 각 상품의 재고를 나타냅니다. for 반복문과 if 조건문을 사용하여 재고가 10개 미만인 상품의 이름을 콘솔에 출력하시오.
 const inventory = {
   apple: 15,
@@ -72,7 +70,7 @@ const inventory = {
   grape: 8
 };
 
-문제 10: 객체 배열 순회하기
+예제 10: 객체 배열 순회하기
 다음은 여러 학생의 정보를 담은 students 배열입니다. for 반복문을 사용하여 각 학생의 이름과 전공을 "이름: 전공" 형태로 콘솔에 출력하시오.
 const students = [
   { name: '김철수', major: '컴퓨터공학' },
@@ -81,7 +79,7 @@ const students = [
 ];
 
 
-문제11 : 공공데이터 포털 : 인천 부평구 인구 현황 테이블 만들기
+예제 11: 공공데이터 포털 : 인천 부평구 인구 현황 테이블 만들기
 [구현 조건]
   1. 공공데이터 포털에서 '인천광역시 부평구_인구 현황' 의 open API 신청하여 결과를 복사하여 'response' 변수에 저장하시오.
   let response = {}
