@@ -23,7 +23,7 @@
         댓글 = { *nid : '1' , rid : '1' , content : '댓글내용' , 
                 writer : '신동엽' , date : '2025-06-16'}
 
-    5. 스프레드시트 링크 : https://docs.google.com/spreadsheets/d/1-0HXHV_1V_XhsvsPiUyVKtvFxDIQhJ4k3mPR45rMmhs/edit?usp=sharing
+    5. [실습7] 스프레드시트 링크 : https://docs.google.com/spreadsheets/d/1-0HXHV_1V_XhsvsPiUyVKtvFxDIQhJ4k3mPR45rMmhs/edit?usp=sharing
                 
 */
 
