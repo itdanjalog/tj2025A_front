@@ -57,15 +57,11 @@ let accountBook = [
 */
 
 // [3] 이벤트 리스너 등록
-// '등록' 버튼을 클릭하면, addItem 함수를 실행하도록 설정
-addButton.addEventListener('click', addItem);
 // [1] 등록 함수 (데이터 추가 기능만 담당)
 function addItem(){
     const dateInput = document.querySelector('#dateInput');
     const contentInput = document.querySelector('#contentInput');
     const amountInput = document.querySelector('#amountInput');
-    const addButton = document.querySelector('#addButton');
-    // 1. 각 input 요소에서 값 가져오기
     const date = dateInput.value;
     const content = contentInput.value;
     const amount = Number(amountInput.value); // 금액은 숫자로 변환
@@ -83,7 +79,7 @@ function addItem(){
 
 // [2] 출력 함수 (현재 데이터를 화면에 그리는 기능만 담당)
 // 페이지가 처음 로드될 때, 초기 데이터를 화면에 출력
-document.addEventListener('DOMContentLoaded', render);
+render();
 function render(){
     const tableBody = document.querySelector('#tableBody');
     let html = ''; // 테이블에 추가할 HTML 문자열

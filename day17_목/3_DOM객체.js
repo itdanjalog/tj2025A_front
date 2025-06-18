@@ -50,16 +50,7 @@ DOM은 웹 브라우저가 HTML 문서를 이해하고 제어할 수 있도록, 
             4. .src : 지정된 마크업의 src속성값 호출/대입
                 - 사용가능한 요소 : <img src="" /> , <audio src="" /> , <video src="" /> 등등
 
-            5. .addEventListener() : 전문가처럼 이벤트 다루기
-                onclick 속성을 HTML에 직접 작성하는 대신, JavaScript 코드 내에서 이벤트와 함수를 연결하는 전문가적인 방식입니다. HTML(구조)과 JavaScript(동작)의 역할을 완벽하게 분리하여 코드의 가독성과 유지보수성을 높입니다.
-
-                정의: 선택된 DOM 객체에 '이벤트 감지기(Listener)'를 부착(add)하는 함수(메소드)입니다.
-                문법:
-                선택된요소.addEventListener('이벤트이름', 실행할함수);
-                이벤트이름: 'click', 'mouseover', 'keydown' , ''DOMContentLoaded 등. onclick과 달리 'on' 접두사를 붙이지 않습니다.
-                실행할함수: 이벤트가 발생했을 때 실행될 함수의 이름 또는 함수 자체를 전달합니다.
-
-            4) .classList : CSS 클래스 조작하기 (★실무 핵심★)
+            5) .classList : CSS 클래스 조작하기 (★실무 핵심★)
                 요소의 class 속성을 직접 제어하는 아주 편리한 기능들을 모아놓은 속성입니다. style을 하나씩 변경하는 것보다 미리 정의된 CSS 클래스를 추가(add)하거나 제거(remove)하는 방식이 훨씬 체계적이고 강력합니다.
 
                 비유: classList는 요소에게 **"이름표"**를 붙이거나 떼는 것과 같습니다. '활성화' 이름표(active 클래스)를 붙이면 그에 맞는 스타일이 적용되고, 떼면 원래대로 돌아오는 식입니다.
@@ -90,14 +81,10 @@ let box2 = document.querySelector('.box2');             // box2 = ( 객체O vs �
 let box22 = document.querySelector('.box2').innerHTML;  // box22 = ( 객체 vs 리터럴/문자열O )
 
 
-// 1. 제어할 HTML 요소들을 먼저 선택해서 변수에 저장한다.
-const myButton = document.querySelector('#myButton');
-const resultBox = document.querySelector('#resultBox');
-
 function aa () {
     // 'click' 이벤트가 발생하면(버튼이 클릭되면) 아래의 함수가 실행된다.
     console.log('버튼이 클릭되었습니다!');
-    
+    const resultBox = document.querySelector('#resultBox');
     // resultBox의 내부 HTML을 변경한다.
     resultBox.innerHTML = '버튼 클릭이 감지되어 내용이 변경되었습니다!';
     
@@ -106,21 +93,21 @@ function aa () {
     resultBox.style.fontWeight = 'bold';
 }
 
-// 2. 버튼(myButton)에 '이벤트 감지기'를 부착한다.
-myButton.addEventListener('click', aa );
 
-
-// 1. 제어할 HTML 요소들을 선택합니다.
-const toggleButton = document.querySelector('#toggleButton');
-const targetBox = document.querySelector('#targetBox');
-
-// 2. 버튼에 'click' 이벤트 리스너를 추가합니다.
-toggleButton.addEventListener('click', function() {
-    
+function bb () {
+    const targetBox = document.querySelector('#targetBox');
     // 3. targetBox의 classList에서 'active' 클래스를 토글합니다.
     //    - targetBox에 'active' 클래스가 없으면 -> 추가해준다.
     //    - targetBox에 'active' 클래스가 있으면 -> 제거한다.
     targetBox.classList.toggle('active');
     
     console.log(targetBox.classList); // 콘솔에서 현재 클래스 목록 확인
-});
+
+}
+
+function cc(){
+    const myInput = document.querySelector('#myInput');
+    const inputValue = myInput.value;
+    console.log(inputValue);
+
+}
