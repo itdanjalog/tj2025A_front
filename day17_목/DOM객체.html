@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <style>
+        /* 3. */
+        #colorBox { 
+            width: 250px;
+            height: 100px;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            line-height: 100px; /* 텍스트 수직 중앙 정렬 */
+        }
+
+        /* 4. dark-mode 클래스가 적용됐을 때의 스타일 */
+        .dark-mode {
+            background-color: #333;
+            color: white;
+        }
+        /* 6. */
+        #targetBox {
+            margin-top: 10px;
+            padding: 20px;
+            background-color: lightcoral;
+            color: white;
+        }   
+        /* 10 */
+        #keyDisplay {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px dashed #ccc;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1> 예제1 </h1> 
+    <h1 id="title">이전 제목</h1>
+
+    <h1> 예제2 </h1> 
+    <input type="text" id="usernameInput" placeholder="이름을 입력하세요">
+    <button id="submitBtn">확인</button>
+    <p id="greeting">결과가 여기에 표시됩니다.</p>
+
+    <h1> 예제3 </h1> 
+    <button id="styleBtn">스타일 변경</button>
+    <div id="colorBox">이 박스의 스타일이 바뀝니다.</div>
+
+    <h1> 예제4 </h1> 
+    <button id="themeBtn">테마 변경</button>
+    <p>이 페이지의 테마가 바뀝니다.</p>
+
+    <h1> 예제5 </h1> 
+    <button id="addBtn">항목 추가</button>
+    <ul id="itemList">
+        <li>기존 항목 1</li>
+    </ul>
+
+    <h1> 예제6 </h1> 
+    <button id="removeBtn">박스 삭제</button>
+    <div id="targetBox">이 박스는 삭제될 예정입니다.</div>
+
+    <h1> 예제7 </h1> 
+    <p class="item">이것은 첫 번째 아이템입니다.</p>
+    <div>이것은 아이템이 아닙니다.</div>
+    <p class="item">이것은 두 번째 아이템입니다.</p>
+    <p class="item">이것은 세 번째 아이템입니다.</p>
+
+    <h1> 예제8 </h1> 
+    <button id="changeImgBtn">이미지 변경</button>
+    <br>
+    <img id="mainImage" src="https://placehold.co/600x400/orange/white" >
+
+    <h1> 예제9 </h1> 
+    <button class="item-button" data-item-id="A-001">상품 A</button>
+    <button class="item-button" data-item-id="B-002">상품 B</button>
+    <button class="item-button" data-item-id="C-003">상품 C</button>
+
+    <h1> 예제10 </h1> 
+    <input type="text" id="keyInput" placeholder="여기에 키보드를 입력하세요...">
+    <div id="keyDisplay">입력 대기 중...</div>
+
+    <h1> body 가장 하단에 JS 파일 호출/링크 </h1> 
+    <script src='DOM객체.js'></script>
+
+</body>
+</html>
