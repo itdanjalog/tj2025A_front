@@ -93,7 +93,7 @@ console.log( userList ); // [확인]
 // 3.처리할명령어 : 함수{}가 실행되면서 실행할 코드들                ,  for 반복문을 사용하여 배열의 모든 요소 콘솔에 하나씩 출력
 function printFruits( array ){ // 함수 정의 
     for( let index = 0 ; index <= array.length - 1 ; index++ ){
-        console.log( array[i] );    
+        console.log( array[index] );    
     }
 } // f end 
 let names = [ '유재석', '강호동' , '신동엽' ];
@@ -112,10 +112,19 @@ isPositive(3); // [확인차 정의한 함수 호출 / 반환값 변수에 저�
 let result = isPositive( -1 ); // [ 확인차 정의하 함수 호출 /반환값 변수에 저장o ]
 console.log( result );
 
-
-
-
 /*예제 9: 전역 변수와 지역 변수
 let globalText = '전역'; 변수를 선언하세요. printLocal 함수 안에서는 let localText = '지역'; 변수를 선언하고, 
-두 변수를 모두 콘솔에 출력해 보세요. 함수 바깥에서는 globalText만 출력되는 것을 확인하세요.
-*/
+두 변수를 모두 콘솔에 출력해 보세요. 함수 바깥에서는 globalText만 출력되는 것을 확인하세요.  */
+// 1. 매개변수 : x
+// 2. 반환값 : x
+// 3. 처리할명령어 : localText 변수를 선언하고 , localText,globalText를 콘솔 출력 
+let globalText = '전역';
+function printLocal(){ // 함수 선언
+    let localText = '지역'; 
+    console.log( globalText );  // ok 
+    console.log( localText );   // ok
+} // func end 
+// [ 확인 ]
+console.log( globalText );      // ok
+console.log( localText );       // fail : 함수 안에서 선언된 지역변수 라서 오류 발생한다. localText is not defined
+printLocal(); // 함수 호출 
