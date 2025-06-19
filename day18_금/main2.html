@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>인사 및 휴가 관리 대시보드</title>
+    <title>실습15: 인사 관리 대시보드</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts & Noto Sans KR -->
@@ -42,12 +42,13 @@
         }
         /* 사원 목록 사진 스타일 */
         .emp-photo {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+            width: 70px;
+            height: 100px;
+            border-radius: 10%;
             object-fit: cover;
             border: 2px solid #fff;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -56,8 +57,8 @@
     <div id="app-container" class="w-full max-w-screen-2xl mx-auto">
         <!-- 헤더 -->
         <header class="mb-8 text-center">
-            <h1 class="text-3xl font-bold text-slate-800">HR & Vacation Dashboard</h1>
-            <p class="text-slate-500 mt-1">사원 및 휴가 신청 통합 관리 시스템</p>
+            <h1 class="text-3xl font-bold text-slate-800">인사 관리 대시보드</h1>
+            <p class="text-slate-500 mt-1">부서, 사원, 휴가 통합 관리 시스템</p>
         </header>
 
         <main class="grid grid-cols-1 lg:grid-cols-8 gap-8">
@@ -66,7 +67,7 @@
             <!-- 왼쪽 컬럼: 부서 관리 -->
             <!-- ======================================================= -->
             <section class="lg:col-span-2 bg-white p-6 sm:p-8 rounded-2xl shadow-lg space-y-8">
-                 <div>
+                <div>
                     <h2 class="text-xl font-semibold text-slate-700 mb-4 border-b pb-3">부서 관리</h2>
                     <form id="department-form" class="space-y-3 mb-4">
                         <div class="flex gap-2">
@@ -79,7 +80,7 @@
                            <thead class="bg-slate-100 sticky top-0">
                                 <tr>
                                     <th class="text-left py-2 px-3 uppercase font-semibold text-sm text-slate-600">부서명</th>
-                                    <th class="text-center py-2 px-3 uppercase font-semibold text-sm text-slate-600 w-16">관리</th>
+                                    <th class="text-center py-2 px-3 uppercase font-semibold text-sm text-slate-600 w-24">관리</th>
                                 </tr>
                             </thead>
                             <tbody id="department-list">
@@ -94,18 +95,17 @@
             <!-- 중간 컬럼: 사원 관리 -->
             <!-- ======================================================= -->
             <section class="lg:col-span-4 bg-white p-6 sm:p-8 rounded-2xl shadow-lg space-y-8">
-                 <!-- 사원 등록 -->
-                <div>
+                 <div>
                     <h2 class="text-xl font-semibold text-slate-700 mb-4 border-b pb-3">사원 등록</h2>
                     <form id="employee-form" class="space-y-4">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label for="emp-name" class="block text-sm font-medium text-slate-600">이름</label>
-                                <input type="text" id="emp-name" required class="mt-1 block w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
+                                <input type="text" id="emp-name" required class="mt-1 block w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
                             </div>
                             <div>
                                  <label for="emp-position" class="block text-sm font-medium text-slate-600">직급</label>
-                                 <input type="text" id="emp-position" required class="mt-1 block w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
+                                 <input type="text" id="emp-position" required class="mt-1 block w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
                             </div>
                         </div>
                          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
@@ -129,22 +129,21 @@
                         </div>
                     </form>
                 </div>
-                 <!-- 사원 목록 -->
                 <div>
                     <h2 class="text-xl font-semibold text-slate-700 mb-4 border-b pb-3">사원 전체 목록</h2>
                     <div class="h-[58vh] overflow-y-auto pr-2">
                         <table class="min-w-full">
                             <thead class="bg-slate-100 sticky top-0">
                                 <tr>
-                                    <th class="py-2 px-3 uppercase font-semibold text-sm text-slate-600 w-12">사진</th>
-                                    <th class="text-left py-2 px-3 uppercase font-semibold text-sm text-slate-600">이름</th>
-                                    <th class="text-left py-2 px-3 uppercase font-semibold text-sm text-slate-600">부서</th>
-                                    <th class="text-left py-2 px-3 uppercase font-semibold text-sm text-slate-600">직급</th>
-                                    <th class="text-center py-2 px-3 uppercase font-semibold text-sm text-slate-600">관리</th>
+                                    <th class="text-center py-2 px-3 uppercase font-semibold text-sm text-slate-600 w-21">사진</th>
+                                    <th class="text-left py-2 px-3 uppercase font-semibold text-sm text-slate-600 w-30">이름</th>
+                                    <th class="text-left py-2 px-3 uppercase font-semibold text-sm text-slate-600 w-30">부서</th>
+                                    <th class="text-left py-2 px-3 uppercase font-semibold text-sm text-slate-600 w-30">직급</th>
+                                    <th class="text-center py-2 px-3 uppercase font-semibold text-sm text-slate-600 w-21">관리</th>
                                 </tr>
                             </thead>
                             <tbody id="employee-list" class="text-slate-700">
-                                <!-- JS로 동적 생성 -->
+                                <!-- JS로 사원 목록 동적 생성 -->
                             </tbody>
                         </table>
                     </div>
@@ -155,7 +154,6 @@
             <!-- 오른쪽 컬럼: 휴가 관리 -->
             <!-- ======================================================= -->
             <section class="lg:col-span-2 bg-white p-6 sm:p-8 rounded-2xl shadow-lg space-y-8">
-                 <!-- 휴가 신청 -->
                  <div>
                     <h2 class="text-xl font-semibold text-slate-700 mb-4 border-b pb-3">사원 휴가 신청</h2>
                     <form id="vacation-form" class="space-y-4">
@@ -184,11 +182,10 @@
                         </div>
                     </form>
                 </div>
-                <!-- 휴가 신청 목록 -->
                 <div>
                      <h2 class="text-xl font-semibold text-slate-700 mb-4 border-b pb-3">휴가 신청 전체 목록</h2>
                      <div id="vacation-list" class="space-y-3 h-[45vh] overflow-y-auto pr-2">
-                        <!-- JS로 동적 생성 -->
+                        <!-- JS로 휴가 목록 동적 생성 -->
                      </div>
                 </div>
             </section>
@@ -198,33 +195,31 @@
     <script>
     document.addEventListener('DOMContentLoaded', () => {
         // =======================================================
-        // 데이터 모델 및 상태 관리
+        // 데이터 모델 및 상태 관리 (전역 배열)
         // =======================================================
+        
         let departments = [
             { id: 1, name: '개발팀' },
             { id: 2, name: '디자인팀' },
             { id: 3, name: '기획팀' },
-            { id: 4, name: '마케팅팀' }
         ];
-        let nextDepartmentId = 5;
+        let nextDepartmentId = 4;
 
         let employees = [
-            { id: 1, name: '김민준', departmentId: 1, position: '선임 개발자', photoUrl: 'https://placehold.co/40x40/E3EEFF/1A202C?text=N/A' },
-            { id: 2, name: '이서연', departmentId: 2, position: '수석 디자이너', photoUrl: 'https://placehold.co/40x40/F3E7E9/1A202C' },
-            { id: 3, name: '박도윤', departmentId: 3, position: '팀장', photoUrl: 'https://placehold.co/40x40/E8F5E9/1A202C' },
-            { id: 4, name: '최아린', departmentId: 4, position: '대리', photoUrl: 'https://placehold.co/40x40/FFFDE7/1A202C' },
-            { id: 5, name: '정하준', departmentId: 1, position: '주니어 개발자', photoUrl: 'https://placehold.co/40x40/F1F8E9/1A202C' }
+            { id: 1, name: '김민준', departmentId: 1, position: '선임 개발자', photoUrl: 'https://placehold.co/100' },
+            { id: 2, name: '이서연', departmentId: 2, position: '수석 디자이너', photoUrl: 'https://placehold.co/100' },
+            { id: 3, name: '박도윤', departmentId: 3, position: '팀장', photoUrl: 'https://placehold.co/100' },
         ];
-        let nextEmployeeId = 6;
+        let nextEmployeeId = 4;
         
         let vacationRequests = [
-            { id: 1, employeeId: 2, startDate: '2025-07-21', endDate: '2025-07-25', reason: '여름 휴가', requestDate: '2025-06-10T10:00:00Z' },
-            { id: 2, employeeId: 1, startDate: '2025-08-04', endDate: '2025-08-04', reason: '병원 진료', requestDate: '2025-06-15T11:30:00Z' },
+            { id: 1, employeeId: 2, startDate: '2025-07-21', endDate: '2025-07-25', reason: '여름 휴가' },
+            { id: 2, employeeId: 1, startDate: '2025-08-04', endDate: '2025-08-04', reason: '병원 진료' },
         ];
         let nextVacationId = 3;
 
         // =======================================================
-        // DOM 요소
+        // DOM 요소 가져오기
         // =======================================================
         const departmentForm = document.getElementById('department-form');
         const departmentListContainer = document.getElementById('department-list');
@@ -238,7 +233,7 @@
         const vacationEmpSelect = document.getElementById('vacation-emp-select');
 
         // =======================================================
-        // 유틸리티 함수
+        // 헬퍼 함수
         // =======================================================
         const findEmployeeById = (id) => employees.find(emp => emp.id === id);
         const findDepartmentById = (id) => departments.find(dept => dept.id === id);
@@ -253,7 +248,15 @@
                 return;
             }
             departments.forEach(dept => {
-                const row = `<tr class="border-b border-slate-200 text-sm"><td class="py-2 px-3">${dept.name}</td><td class="py-2 px-3 text-center"><button data-id="${dept.id}" class="delete-department-btn text-red-500 hover:text-red-700 text-xs">삭제</button></td></tr>`;
+                const row = `
+                    <tr class="border-b border-slate-200 text-sm">
+                        <td class="py-2 px-3">${dept.name}</td>
+                        <td class="py-2 px-3 text-center space-x-2">
+                            <button data-id="${dept.id}" class="edit-department-btn text-blue-500 hover:text-blue-700 text-xs">수정</button>
+                            <button data-id="${dept.id}" class="delete-department-btn text-red-500 hover:text-red-700 text-xs">삭제</button>
+                        </td>
+                    </tr>
+                `;
                 departmentListContainer.innerHTML += row;
             });
         };
@@ -281,7 +284,8 @@
                         <td class="py-3 px-3 font-medium">${emp.name}</td>
                         <td class="py-3 px-3">${deptName}</td>
                         <td class="py-3 px-3">${emp.position}</td>
-                        <td class="py-3 px-3 text-center">
+                        <td class="py-3 px-3 text-center space-x-2">
+                            <button data-id="${emp.id}" class="edit-employee-btn text-blue-500 hover:text-blue-700 text-xs">수정</button>
                             <button data-id="${emp.id}" class="delete-employee-btn text-red-500 hover:text-red-700 text-xs">삭제</button>
                         </td>
                     </tr>
@@ -299,10 +303,10 @@
                 vacationEmpSelect.innerHTML += option;
             });
         };
-
+        
         const renderVacationList = () => {
             vacationListContainer.innerHTML = '';
-            const sortedRequests = [...vacationRequests].sort((a,b) => new Date(b.requestDate) - new Date(a.requestDate));
+            const sortedRequests = [...vacationRequests].sort((a,b) => b.id - a.id);
 
             if (sortedRequests.length === 0) {
                 vacationListContainer.innerHTML = '<p class="text-center text-slate-500 py-10">휴가 신청 내역이 없습니다.</p>';
@@ -310,7 +314,7 @@
             }
             sortedRequests.forEach(req => {
                 const employee = findEmployeeById(req.employeeId);
-                const empName = employee ? employee.name : '퇴사자';
+                const empName = employee ? employee.name : '알 수 없음';
                 const item = `
                     <div class="p-4 rounded-lg border border-slate-200 bg-slate-50">
                         <div class="flex justify-between items-start">
@@ -338,6 +342,7 @@
         // =======================================================
         // 이벤트 핸들러
         // =======================================================
+        
         departmentForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const deptNameInput = document.getElementById('dept-name');
@@ -355,15 +360,30 @@
         });
 
         departmentListContainer.addEventListener('click', (e) => {
-            if (e.target.classList.contains('delete-department-btn')) {
-                const deptId = parseInt(e.target.dataset.id);
-                const isEmployeeAssigned = employees.some(emp => emp.departmentId === deptId);
+            const target = e.target;
+            const id = parseInt(target.dataset.id);
+
+            if (target.classList.contains('edit-department-btn')) {
+                const department = findDepartmentById(id);
+                const newName = prompt('수정할 부서명을 입력하세요:', department.name);
+                if (newName && newName.trim() !== '') {
+                    if (departments.some(d => d.name === newName.trim() && d.id !== id)) {
+                        alert('이미 존재하는 부서명입니다.');
+                        return;
+                    }
+                    department.name = newName.trim();
+                    renderAll();
+                }
+            }
+
+            if (target.classList.contains('delete-department-btn')) {
+                const isEmployeeAssigned = employees.some(emp => emp.departmentId === id);
                 if (isEmployeeAssigned) {
                     alert('해당 부서에 소속된 사원이 있어 삭제할 수 없습니다.');
                     return;
                 }
                 if (confirm('정말 이 부서를 삭제하시겠습니까?')) {
-                    departments = departments.filter(dept => dept.id !== deptId);
+                    departments = departments.filter(dept => dept.id !== id);
                     renderAll();
                 }
             }
@@ -377,7 +397,6 @@
         employeeForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const photoFile = empPhotoInput.files[0];
-            
             const newEmployee = {
                 id: nextEmployeeId++,
                 name: document.getElementById('emp-name').value.trim(),
@@ -396,16 +415,27 @@
         });
 
         employeeListBody.addEventListener('click', (e) => {
-            if (e.target.classList.contains('delete-employee-btn')) {
-                const empId = parseInt(e.target.dataset.id);
+            const target = e.target;
+            const id = parseInt(target.dataset.id);
+
+            if (target.classList.contains('edit-employee-btn')) {
+                const employee = findEmployeeById(id);
+                const newName = prompt('수정할 이름을 입력하세요:', employee.name);
+                const newPosition = prompt('수정할 직급을 입력하세요:', employee.position);
+                if (newName && newName.trim() !== '') employee.name = newName.trim();
+                if (newPosition && newPosition.trim() !== '') employee.position = newPosition.trim();
+                renderAll();
+            }
+
+            if (target.classList.contains('delete-employee-btn')) {
                 if (confirm('해당 사원을 삭제하면 관련된 모든 휴가 신청 기록도 삭제됩니다. 정말 삭제하시겠습니까?')) {
-                    employees = employees.filter(emp => emp.id !== empId);
-                    vacationRequests = vacationRequests.filter(req => req.employeeId !== empId);
+                    employees = employees.filter(emp => emp.id !== id);
+                    vacationRequests = vacationRequests.filter(req => req.employeeId !== id);
                     renderAll();
                 }
             }
         });
-
+        
         vacationForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const startDate = document.getElementById('vacation-start-date').value;
@@ -419,8 +449,7 @@
                 employeeId: parseInt(document.getElementById('vacation-emp-select').value),
                 startDate: startDate,
                 endDate: endDate,
-                reason: document.getElementById('vacation-reason').value.trim(),
-                requestDate: new Date().toISOString()
+                reason: document.getElementById('vacation-reason').value.trim()
             };
             if (!newRequest.employeeId || !newRequest.startDate || !newRequest.endDate || !newRequest.reason) {
                 alert('모든 필드를 입력해주세요.');
