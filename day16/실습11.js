@@ -98,6 +98,7 @@ gainScore()를 세 번, loseScore()를 한 번 호출한 뒤, 최종 점수를 �
 // 1. (gainScore)매개변수 : X
 // 2. (gainScore)리턴값 : X
 // 3. (gainScore)로직 : 전역변수(userScore)를 10증가.
+/*
 let userScore = 0;
 function gainScore( ){
     userScore += 10; // 전역변수 10증가. 
@@ -113,18 +114,28 @@ gainScore();
 gainScore();
 loseScore();
 console.log( userScore );   // 25 
+*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*실습 5: 최고 점수 학생 찾기
+전역변수 students 배열 데이터를 이용하여 , 
+가장 높은 점수(score)를 가진 학생의 이름을 찾아 반환하는 findTopStudent 함수를 만드세요.
+const students = [ { name: '김철수', score: 85 },{ name: '이영희', score: 92 },{ name: '박민준', score: 78 }]; */
+// [ findTopStudent ] 최고 점수 학생 찾기 함수
+// 1. 매개변수 : x
+// 2. 반환값 : 가장높은점수를가진이름
+// 3. 로직(명령코드들) : students배열내 가장 높은 점수(score)를 가진 학생의 이름을 찾는 행동/로직/코드 
+// * 전역변수 
+const students = [ { name: '김철수', score: 85 },{ name: '이영희', score: 92 },{ name: '박민준', score: 78 } ]; 
+function findTopStudent(  ){
+    let maxObj = { name : '' , score : 0 }
+    for( let index = 0 ; index <= students.length - 1 ; index++ ){
+        const student =  students[index];
+        if( student.score > maxObj.score ){
+            maxObj = student;    
+        }
+    } // for end 
+    return maxObj.name; // 가장높은점수의이름
+} // f end 
+// 확인차
+let result = findTopStudent(); 
+console.log( result );
