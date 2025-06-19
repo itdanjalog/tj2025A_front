@@ -18,6 +18,11 @@
                 *선택자 : 1.마크업명 2. .클래스명 3. #id명 
             4. dom객체.innerHTML                    : 마크업내 html내용물을 호출 하는 속성
                 * <마크업> !!!여기가 innerHTML 입니다. </마크업>
+                * inner없음 : <input /> , <img /> 등등 
+            5. dom객체.value 
+                * <마크업 value="여기!!" / >
+                * value있음 : <input> , <select> , <textarea> 등등
+                * value없음 : <div> , <span> , <table> 등등
 */
 // [1]
 console.log( document ) ;   // HTML 마크업 전체 
@@ -37,6 +42,31 @@ console.log( divArray );
 const div2 = document.querySelector('div');
 const html = div2.innerHTML;
 console.log( html ); // <div> 박스1 </div> -->  박스1 
+// [6]
+// 함수 실행 조건 : [함수1실행] 버튼을 클릭했을때
+// 매개변수 : x  , 반환값 : x , 
+// 로직 : 아래 참고 
+function func1(){ // 함수 선언 
+    // 1. 함수실행테스트출력
+    console.log('--- func1 exe ---');
+    // 2. input 마크업를 JS dom객체를 가져오기 
+    const myInput = document.querySelector('.myInput');
+        console.log( myInput ); // 확인
+    // 3. 가져온 JS dom객체내 value 속성값 가져오기 
+    const text = myInput.value;
+        console.log( text );
+    // vs 
+    // const text = document.querySelector('.myInput').value;
+} // func end 
+// [7]
+function func2(){
+    console.log( '--- func2 exe ---');
+
+    document.querySelector('.title').innerHTML = 'JS에서작성한것';
+        // vs
+    //const title = document.querySelector('.title');
+    //title.innerHTML = 'JS에서 작성한것';
+}
 
 
 
