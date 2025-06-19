@@ -32,4 +32,32 @@ function func2(){
     greeting.innerHTML = `안녕하세요, ${ userName }님!`
 }
 
+/*예제 3: 요소 스타일 동적으로 변경하기*/
+// '스타일 변경' 버튼(id: 'styleBtn')을 클릭하면,
+// id가 'colorBox'인 <div>의 배경색을 'skyblue'로, 글자색을 'white'로 변경하시오.
+// (1) 목표 요소     : #styleBtn, #colorBox
+// (2) 사용할 내장 속성/메소드: .style
+// (3) 처리할 내용   : 버튼 클릭 시 div의 배경색과 글자색 스타일 변경
+function func3(){
+    console.log( '--- func3 exe ---');
+    // 1. colorBox 인 마크업 객체 가져오기 
+    const colorBox = document.querySelector('#colorBox');
+        console.log( colorBox );
+    // 2. 마크업 객체내 style 속성 대입하기.
+    colorBox.style.backgroundColor = 'skyblue';
+    colorBox.style.color = 'white';
+}
+
+/*예제 4: CSS 클래스 토글하기 (다크 모드 예시)*/
+// '테마 변경' 버튼(id: 'themeBtn')을 클릭할 때마다 <body> 태그에 'dark-mode' 클래스를 추가하거나 제거(토글)하시오.
+// (1) 목표 요소     : body, #themeBtn
+// (2) 사용할 내장 속성/메소드: .classList.toggle()
+function func4(){
+    console.log( '--- func4 exe ---');
+    const body = document.querySelector('body');
+        console.log( body );
+    body.classList.toggle('dark-mode');
+}
+
+
 
