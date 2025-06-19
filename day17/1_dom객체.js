@@ -23,6 +23,13 @@
                 * <마크업 value="여기!!" / >
                 * value있음 : <input> , <select> , <textarea> 등등
                 * value없음 : <div> , <span> , <table> 등등
+            6. dom객체.style =                      : 마크업내 style(CSS) 요소 대입 
+            7. dom객체.style.CSS속성명 =            : 마크업내 style(CSS) 요소 추가 
+            8. dom객체.classList                    : 마크업내 적용된 class 들 반환  
+                dom객체.classList.add('클래스명')    : 마크업내 클래스 추가 
+                dom객체.classList.remove('클래스명') : 마크업내 클래스 삭제
+                dom객체.classList.toggle('클래스명') : 마크업내 지정클래스가 없으면 추가 있으면 삭제
+                dom객체.classList.contains('클래스명') : 마크럽내 지정클래스가 있는지 확인 , true / false 반환 
 */
 // [1]
 console.log( document ) ;   // HTML 마크업 전체 
@@ -58,6 +65,7 @@ function func1(){ // 함수 선언
     // vs 
     // const text = document.querySelector('.myInput').value;
 } // func end 
+
 // [7]
 function func2(){
     console.log( '--- func2 exe ---');
@@ -67,6 +75,31 @@ function func2(){
     //const title = document.querySelector('.title');
     //title.innerHTML = 'JS에서 작성한것';
 }
+
+// [8]
+function func3(){
+    console.log( '--- func3 exe --- ');
+    // 1. 특정한 선택자의 마크업를 가져오기
+    const title2 = document.querySelector('.title2')
+    // 2. 해당 마크업객체내 .style속성
+    title2.style = 'color : red; font-size : 8px;' // css문법 문자열로 대입
+    // * 
+    const body = document.querySelector('body');
+    body.style.backgroundColor = 'black';
+    // * 
+    title2.classList.toggle('myStyle');
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
