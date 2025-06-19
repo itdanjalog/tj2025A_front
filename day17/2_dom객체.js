@@ -54,10 +54,46 @@ function func3(){
 // (2) 사용할 내장 속성/메소드: .classList.toggle()
 function func4(){
     console.log( '--- func4 exe ---');
+    // 1. body 마크업 객체 가져오기.
     const body = document.querySelector('body');
         console.log( body );
+    // 2. 마크업 객체내 클래스 추가및제거 
     body.classList.toggle('dark-mode');
 }
+
+/*예제 5: 특정 HTML 요소 제거하기*/
+// '박스 삭제' 버튼(id: 'removeBtn')을 클릭하면, id가 'targetBox'인 <div> 요소를 문서에서 제거하시오.
+// (1) 목표 요소     : #removeBtn, #targetBox
+// (2) 사용할 내장 속성/메소드:  .remove()
+// (3) 처리할 내용   : 버튼 클릭 시 #targetBox 요소를 DOM에서 제거
+function func5(){
+    console.log('--- func5 exe ---');
+    // 1. targetBox 마크업 객체 가져오기.
+    const targetBox = document.querySelector('#targetBox');
+        console.log(targetBox);
+    // 2. 마크업 객체의 요소 삭제하기.
+    targetBox.remove();
+}
+/*예제 6: 여러 요소에 동일한 작업 반복하기*/
+// 클래스가 'item'인 모든 <p> 요소의 글자색을 'green'으로, 글자 두께를 'bold'로 변경하시오.
+// (1) 목표 요소     : .item (모든 요소)
+// (2) 사용할 내장 속성/메소드: .querySelectorAll(), for 반복문, .style
+// (3) 처리할 내용   : 모든 .item 요소를 순회하며 스타일 변경
+func6(); // 함수 호출 
+function func6(){ // 함수 정의 
+    console.log( `--- func6 exe ---`);
+    // 1. item 마크업 객체 모두 가져오기.
+    const items = document.querySelectorAll('.item');
+        console.log( items );
+    // 2. 가져온 여러개 item 들을 반복문 이용하여 순회/조회
+    for( let index = 0 ; index <= items.length - 1 ; index++ ){
+        const item = items[index];   
+        console.log( item );
+        // 3. 각 마크업들의 css 변경 
+        item.style.color = 'green';
+        item.style.fontWeight = 'bold';
+    } // for end 
+} // func end 
 
 
 
