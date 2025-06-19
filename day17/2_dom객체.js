@@ -72,7 +72,7 @@ function func5(){
     const targetBox = document.querySelector('#targetBox');
         console.log(targetBox);
     // 2. 마크업 객체의 요소 삭제하기.
-    targetBox.remove();
+    targetBox.remvoe();
 }
 /*예제 6: 여러 요소에 동일한 작업 반복하기*/
 // 클래스가 'item'인 모든 <p> 요소의 글자색을 'green'으로, 글자 두께를 'bold'로 변경하시오.
@@ -95,5 +95,30 @@ function func6(){ // 함수 정의
     } // for end 
 } // func end 
 
-
-
+/*예제 7: 이미지 소스(src) 변경하기 , https://placehold.co/ */
+// '이미지 변경' 버튼(id: 'changeImgBtn')을 클릭하면,
+// id가 'mainImage'인 <img> 요소의 src 속성을 'https://placehold.co/600x400/red/white'로 변경하시오.
+// (1) 목표 요소     : #changeImgBtn, #mainImage
+// (2) 사용할 내장 속성/메소드: , .src
+// (3) 처리할 내용   : 버튼 클릭 시 이미지의 src 속성 값을 변경
+function func7(){
+    console.log( '--- func7 exe ---');
+    // 1. 'mainImage' 마크업 객체 가져오기
+    const mainImage = document.querySelector('#mainImage');     console.log( mainImage );
+    // 2. 마크업 객체내 src 속성 에 새로운 경로 대입 
+    mainImage.src = 'https://placehold.co/600x400/red/white'
+}
+/* 예제 8 : select 에서 선택한 option값 console 출력하기. */
+// (1) 목표 요소        : #foodSelect
+// (2) 사용할 내장 속성/메소드 : .value
+// (3) 처리할 내용      : select 요소의 값이 변경될 때마다 선택된 option의 value를 콘솔에 출력
+function func8(){   
+// onclick : 해당 마크업 클릭했을때 발생 , 
+// onchange : 해당 마크업내 value 변경 되었을때 발생
+    console.log( `--- func8 exe ---`);
+    // 1. 'foodSelect' 마크업 객체 가져오기.
+    const foodSelect = document.querySelector('#foodSelect'); console.log( foodSelect );
+    // 2. 마크업객체내 value 속성값 가져오기 
+    const value = foodSelect.value;
+    console.log( value );
+}
