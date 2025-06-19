@@ -123,6 +123,7 @@ function printLocal(){ // 함수 선언
     let localText = '지역'; 
     console.log( globalText );  // ok 
     console.log( localText );   // ok
+    // 지역변수가 갖는 자료를 함수 밖으로 빼는법 == 반환값 사용하기.
 } // func end 
 // [ 확인 ]
 console.log( globalText );      // ok
