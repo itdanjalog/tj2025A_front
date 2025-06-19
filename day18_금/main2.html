@@ -15,31 +15,6 @@
             font-family: 'Inter', 'Noto Sans KR', sans-serif;
             background-color: #f1f5f9;
         }
-        /* 파일 입력 커스텀 스타일 */
-        .file-input-label {
-            display: inline-block;
-            padding: 8px 12px;
-            font-size: 14px;
-            font-weight: 500;
-            color: #334155;
-            background-color: #f1f5f9;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        .file-input-label:hover {
-            background-color: #e2e8f0;
-        }
-        input[type="file"] {
-            display: none;
-        }
-        .file-name-display {
-            font-size: 12px;
-            color: #64748b;
-            margin-left: 8px;
-            vertical-align: middle;
-        }
         /* 사원 목록 사진 스타일 */
         .emp-photo {
             width: 70px;
@@ -116,9 +91,7 @@
                             <div>
                                 <label class="block text-sm font-medium text-slate-600">사진</label>
                                 <div class="mt-1">
-                                    <label for="emp-photo" class="file-input-label">파일 선택</label>
                                     <input type="file" id="emp-photo" accept="image/*">
-                                    <span id="file-name-display" class="file-name-display"></span>
                                 </div>
                             </div>
                         </div>
@@ -389,10 +362,7 @@
             }
         });
         
-        empPhotoInput.addEventListener('change', () => {
-            const file = empPhotoInput.files[0];
-            fileNameDisplay.textContent = file ? file.name : '';
-        });
+
 
         employeeForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -410,7 +380,6 @@
             }
             employees.push(newEmployee);
             employeeForm.reset();
-            fileNameDisplay.textContent = '';
             renderAll();
         });
 
