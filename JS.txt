@@ -311,13 +311,24 @@
         (4) (마크업객체).value                      : <마크업 value="**여기** /> 에 자료 대입/호출
             사용가능마크업 : <input /> , <select > , <textarea> 등등
         (5) (마크업객체).style                      : <마크업 style="**여기**" /> 에 CSS 문법 대입/호출
-        (6) (마크업객체).src                        : <마크업 src="**여기"** /> 에 파일 경로 대입/호출  
+        (6) (마크업객체).src                        : <마크업 src="**여기"** /> 에 파일(소스) 경로 대입/호출  
             사용가능마크업 : <img /> , <audio /> 등                
         (7) (마크업객체).remove()                   : HTML 에서 지정 마크업 지우기
-        (8) (마크업객체).classList                          :
+        (8) (마크업객체).classList                         
             (마크업객체).classList.add('클래스명')          : 지정 마크업에 클래스 추가 
             (마크업객체).classList.remove('클래스명')       : 지정 마크업에 클래스 삭제
             (마크업객체).classList.toggle('클래스명')       : 지정 마크업에 클래스 추가 혹은 (존재하면)삭제
             (마크업객체).classList.contains('클래스명')     : 지정 마크업에 클래스 존재 여부 TRUE/FALSE 반환값
+        * 연산식 또는 변수호출식 길어졌을때는 중간 결과를 변수에 담아서 확인 
+            예1]
+                let 변수명A = document.querySelector('선택자')
+                let 변수명B = 변수명A.value 
+                        ========== VS =============
+                let 변수명B = document.querySelector('선택자').value
+            예2]
+                let 변수명A = 3+2
+                let 변수명B = 변수명A * 5
+                    ========== VS =============
+                let 변수명B = (3+2) * 5
 
-    
+
