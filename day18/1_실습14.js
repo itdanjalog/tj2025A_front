@@ -52,11 +52,28 @@ let currentPno = 3; // *
 // * 확인차 
 console.log( categoryList );
 console.log( productList ); 
+// ========================== [2] 기능 로직 ======================= //
+// 1. 카테고리 출력함수 : 실행조건 : 페이지(HTML/JS) 가 열렸을때 함수실행
+categoryPint();
+function categoryPint(){                                                                console.log( ' >> categoryPint exe' );
+    // (1). 어디에 , <select id="categoryInput">
+    const categoryInput = document.querySelector('#categoryInput');                     console.log( categoryInput);
+    // (2). 무엇을 , 카테고리목록(배열)내 객체정보를 하나씩 HTML 형식으로 
+    let html = `<option value="" disabled selected > 카테고리 선택하세요. </option>`;
+        for( let index = 0 ; index <= categoryList.length - 1 ; index++ ){  // index번째 카테고리(1개)객체 꺼내기 
+            const category = categoryList[index];                                       console.log( category );
+            html += `<option value="${ category.cno }"> ${ category.cname } </option>`; 
+            // 주의할점 : `백틱 주의
+        } // for end 
+    // (3). (html) 출력 
+    categoryInput.innerHTML = html;                                                     console.log( html );
+} // func end 
+
+// 2. 제품 등록함수 
 
 
+// 3. 제품목록 출력함수
 
+// 4. 제품 삭제함수
 
-
-
-
-
+// 5. 제품 수정함수 
