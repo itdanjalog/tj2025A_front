@@ -142,15 +142,36 @@ function productPrint(){ console.log('>>productPrint exe');
     tbody.innerHTML = html;                                              console.log( html );
 } // func end // 출력함수 끝 
 
-// 4. 제품 삭제함수 : 배열내 삭제할 객체를 찾아서 .splice 한다.   < 매개변수 : 제품코드 >             
+// 4. 제품 삭제함수 : 배열내 삭제할 객체를 찾아서 .splice() 한다.   < 매개변수 : 제품코드 >             
 // 실행조건 : [삭제버튼] onclick 했을때
 function productDelete( pno ){ console.log( '>>productDelete exe ' ); console.log( pno );
-
+    for( let index = 0 ; index <= productList.length-1 ; index++ ){ // (1). 삭제할 번호의 객체를 찾는다. <for> 
+         if( productList[index].pno == pno ){ // 만약에 index번째 제품코드와 삭제할제품코드가 같으면
+            productList.splice( index , 1 ); // 해당 index 해서 요소1개 삭제
+            alert('[성공] 제품 삭제 '); // 안내
+            productPrint();  // 삭제 이후 제품목록 새로고침/렌더링 
+            return; // 목표 이뤘으니 함수 종료한다.
+         }
+    } // for end 
+    // (2) 못찾았다.
+    alert('[오류] 제품번호 불일치 ');
 } // func end // 삭제함수 끝 
 
 // 5. 제품 수정함수 : 새로운 정보를 받아 배열내 수정할 객체를 찾아서 대입한다. < 매개변수 : 제품코드 >  , 
 // 실행조건 : [수정버튼] onclick 했을때
 function productEdit( pno ){ console.log( '>>productEdit exe'); console.log( pno );
-
+    for( let index = 0 ; index <= productList.length - 1 ; index++ ){ // (1) 수정할 번호의 객체를 찾는다. <for>
+        if( productList[index].pno == pno ){ // 만약에 index번째 제품코드가 수정할제품코드와 같다면
+            const pname = prompt('수정할 제품명 : ');   // 수정할 값 입력받기/
+            const pprice = prompt('수정할 제품가격 : ');
+            productList[index].pname = pname;  // 입력받은 값으로 수정 
+            productList[index].pprice = Number(pprice);
+            alert('[성공] 제품 수정'); // 안내
+            productPrint(); // 제품목록 새로고침
+            return; // 목표를 이뤘으니 함수 강제 종료한다.
+        } // if end 
+    } // for end
+    // (2)
+    alert('[실패] 제품 수정 '); 
 } // func end // 수정함수 끝 
 
