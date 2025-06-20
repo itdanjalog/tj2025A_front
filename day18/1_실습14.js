@@ -189,4 +189,3 @@ function getCategory( cno ){
     // 2. 못찾았다.
     return null;    // 
 } // func end 
-
