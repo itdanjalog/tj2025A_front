@@ -121,11 +121,26 @@ function productAdd(){ console.log('>> productAdd exe');
 productPrint();
 function productPrint(){ console.log('>>productPrint exe');
     // (1) 어디에 , <tbody>
-    const tbody = document.querySelector('#main > table > tbody ');
+    const tbody = document.querySelector('#main > table > tbody ');     console.log( tbody );
     // (2) 무엇을 
-    let html = '출력테스트!!';
+    let html = '';
+        for( let index = 0 ; index <= productList.length-1 ; index++ ){
+            const product = productList[index];
+            html += `<tr>    
+                        <td> <img src="${ product.pimg }" /> </td>   
+                        <th> ${ product.cno } </td>   
+                        <td> ${ product.pname } </td> 
+                        <td> ${ product.pprice.toLocaleString() } </td>             
+                        <td> ${ product.pdate } </td>       
+                        <td> 
+                            <button class="btnDelete"> 삭제 </button> 
+                            <button class="btnEdit"> 수정 </button> 
+                        </td> 
+                    </tr>`; //백틱 주의 , 샘플로 작성한 HTML의 <tr> 복붙
+            
+        } // for end 
     // (3) 출력 
-    tbody.innerHTML = html;
+    tbody.innerHTML = html;                                              console.log( html );
 } // func end // 출력함수 끝 
 
 // 4. 제품 삭제함수
