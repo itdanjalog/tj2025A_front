@@ -113,9 +113,20 @@ function productAdd(){ console.log('>> productAdd exe');
     ppriceInput.value = '';
     alert('[성공] 제품 등록');
 
+    productPrint(); // [다시 제품 출력함으로써 새로고침 ] / 렌더링
+
 } // func end  // 등록함수 끝 
 
-// 3. 제품목록 출력함수
+// 3. 제품목록 출력함수 , 실행조건 : (1) 페이지(HTML/JS) 가 열렸을때 함수실행, (2) 등록/삭제/수정 처리 했을때
+productPrint();
+function productPrint(){ console.log('>>productPrint exe');
+    // (1) 어디에 , <tbody>
+    const tbody = document.querySelector('#main > table > tbody ');
+    // (2) 무엇을 
+    let html = '출력테스트!!';
+    // (3) 출력 
+    tbody.innerHTML = html;
+} // func end // 출력함수 끝 
 
 // 4. 제품 삭제함수
 
