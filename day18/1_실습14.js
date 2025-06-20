@@ -126,9 +126,11 @@ function productPrint(){ console.log('>>productPrint exe');
     let html = '';
         for( let index = 0 ; index <= productList.length-1 ; index++ ){
             const product = productList[index];                         console.log( product );
+            // 현재 제품의 저장된 카테고리 번호로 카테고리객체 구하기
+            const category = getCategory( product.cno) ;
             html += `<tr>    
                         <td> <img src="${ product.pimg }" /> </td>   
-                        <th> ${ product.cno } </td>   
+                        <th> ${ category.cno } </td>   
                         <td> ${ product.pname } </td> 
                         <td> ${ product.pprice.toLocaleString() } </td>             
                         <td> ${ product.pdate } </td>       
@@ -174,4 +176,17 @@ function productEdit( pno ){ console.log( '>>productEdit exe'); console.log( pno
     // (2)
     alert('[실패] 제품 수정 '); 
 } // func end // 수정함수 끝 
+
+// 6. 카테고리번호(cno) 에 해당 하는 카테고리객체 1개 반환 함수
+function getCategory( cno ){ 
+    console.log('>> getCategory exe '); console.log( cno ); 
+    // 1. 매개변수(cno) 와 동일한 카테고리객체 찾기 
+    for( let index = 0 ; index <= categoryList.length - 1 ; index++ ){
+        if( categoryList[index].cno == cno ){ // 만일 index번째 cno 
+            return categoryList[index]; // 찾은 객체를 반환한다.
+        } // if end 
+    } // for end 
+    // 2. 못찾았다.
+    return null;    // 
+} // func end 
 
