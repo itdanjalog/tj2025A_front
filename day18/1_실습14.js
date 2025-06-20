@@ -69,7 +69,34 @@ function categoryPint(){                                                        
     categoryInput.innerHTML = html;                                                     console.log( html );
 } // func end 
 
-// 2. 제품 등록함수 
+// 2. 제품 등록함수 : 실행조건 : <등록버튼> onclick 클릭했을때
+// HTML : <button onclick="productAdd()" class="btnAdd"> 등록 </button>
+function productAdd(){ console.log('>> productAdd exe');
+    // (1) 입력 마크업객체 가져오기 
+    const categoryInput = document.querySelector('#categoryInput'); console.log( categoryInput );
+    const pnameInput = document.querySelector('#pnameInput');       console.log( pnameInput );
+    const ppriceInput = document.querySelector('#ppriceInput');     console.log( ppriceInput );
+    const pimgInput = document.querySelector('#pimgInput');         console.log( pimgInput );
+    // (2) 입력 마크업객체 에서 입력값 가져오기 
+    const cno = categoryInput.value;                                console.log( cno );
+    const pname = pnameInput.value;                                 console.log( pname );
+    const pprice = ppriceInput.value;                               console.log( pprice );
+     // 첨부파일은 value 대신에 files[0] : 선택된 첨부파일의 첫번째 파일객체 가져오기
+    const pimg = pimgInput.files[0];                                console.log( pimg );
+    // (*) 유효성검사
+    // (3) 여러 데이터 객체로 구성 하기.
+    const obj = { 
+        pno : ++currentPno, // 현재제품코드에 1 증가 후 구성 
+        cno : Number( cno ),
+        pname : pname ,
+        pprice : Number(pprice) , // 제품가격은 숫자형 타입변환 
+        pimg : pimg ? URL.createObjectURL( pimg ) : 'https://placehold.co/100x100' ,  // URL.createObjectURL() : 선택한 파일객체의 url 주소 생성함수.
+        pdate : '2025-06-20'
+    };                                                              console.log( obj );
+    // (4) 구성한 객체를 배열에 저장
+    productList.push( obj );                                        console.log( productList ); 
+    // (*) 기타등등 
+} // func end 
 
 
 // 3. 제품목록 출력함수
