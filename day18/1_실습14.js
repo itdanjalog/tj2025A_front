@@ -125,7 +125,7 @@ function productPrint(){ console.log('>>productPrint exe');
     // (2) 무엇을 
     let html = '';
         for( let index = 0 ; index <= productList.length-1 ; index++ ){
-            const product = productList[index];
+            const product = productList[index];                         console.log( product );
             html += `<tr>    
                         <td> <img src="${ product.pimg }" /> </td>   
                         <th> ${ product.cno } </td>   
@@ -133,16 +133,24 @@ function productPrint(){ console.log('>>productPrint exe');
                         <td> ${ product.pprice.toLocaleString() } </td>             
                         <td> ${ product.pdate } </td>       
                         <td> 
-                            <button class="btnDelete"> 삭제 </button> 
-                            <button class="btnEdit"> 수정 </button> 
+                            <button onclick="productDelete( ${ product.pno } )"   class="btnDelete"> 삭제 </button> 
+                            <button onclick="productEdit( ${ product.pno } )"     class="btnEdit"> 수정 </button> 
                         </td> 
                     </tr>`; //백틱 주의 , 샘플로 작성한 HTML의 <tr> 복붙
-            
         } // for end 
     // (3) 출력 
     tbody.innerHTML = html;                                              console.log( html );
 } // func end // 출력함수 끝 
 
-// 4. 제품 삭제함수
+// 4. 제품 삭제함수 : 배열내 삭제할 객체를 찾아서 .splice 한다.   < 매개변수 : 제품코드 >             
+// 실행조건 : [삭제버튼] onclick 했을때
+function productDelete( pno ){ console.log( '>>productDelete exe ' ); console.log( pno );
 
-// 5. 제품 수정함수 
+} // func end // 삭제함수 끝 
+
+// 5. 제품 수정함수 : 새로운 정보를 받아 배열내 수정할 객체를 찾아서 대입한다. < 매개변수 : 제품코드 >  , 
+// 실행조건 : [수정버튼] onclick 했을때
+function productEdit( pno ){ console.log( '>>productEdit exe'); console.log( pno );
+
+} // func end // 수정함수 끝 
+
