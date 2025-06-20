@@ -36,5 +36,27 @@
     제품 관리 기능:
         삭제: 각 제품의 "삭제" 버튼을 클릭하면 해당 제품이 목록에서 즉시 제거되어야 합니다.
         수정: "수정" 버튼을 클릭하면, prompt 창을 통해 새로운 제품명과 가격을 입력받아 해당 제품의 정보를 수정하고 목록을 즉시 갱신해야 합니다.
-
 */
+
+// ========================== [1] 데이터 모델링 샘플 ======================= //
+// 1. 카테고리 목록 
+const categoryList = [ { cno : 1 , cname : '음료류' } , { cno : 2 , cname : '과자류' } ];
+let currentCno = 2; // * 코드를 자동대입 하기 위한 현재 코드번호 , 샘플의 마지막 코드의번호 로 초기화
+// 2. 제품 목록 , 제품이미지가 없을경우 : https://placehold.co/100x100 경로 샘플
+const productList = [
+    { pno : 1 , cno : 1 , pname : '코카콜라' , pprice : 1000 , pimg : 'https://placehold.co/100x100' , pdate : '2025-06-17' } ,
+    { pno : 2 , cno : 2 , pname : '새우깡'   , pprice : 1200 , pimg : 'https://placehold.co/100x100' , pdate : '2025-06-18' } ,
+    { pno : 3 , cno : 1 , pname : '칠성사이다',pprice : 900 ,  pimg : 'https://placehold.co/100x100' , pdate : '2025-06-19' } ,
+];
+let currentPno = 3; // * 
+// * 확인차 
+console.log( categoryList );
+console.log( productList ); 
+
+
+
+
+
+
+
+
