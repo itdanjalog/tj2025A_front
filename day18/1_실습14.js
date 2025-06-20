@@ -93,7 +93,7 @@ function productAdd(){ console.log('>> productAdd exe');
     let pdate = `${year}-${month}-${day}`;                          console.log( pdate );
     // (*) 유효성검사// * 입력한 값이 없으면 등록 실패 
         if( cno == '' || pname == '' || pprice == '' ){
-            alert('비어있는 항목이 있습니다. [실패] ');
+            alert('[실패] 비어있는 항목이 있습니다.');
             return; // 반환값 없는 함수종료 : 아래코드는 실행되지 않는다.
         }
     // (3) 여러 데이터 객체로 구성 하기.
@@ -112,7 +112,7 @@ function productAdd(){ console.log('>> productAdd exe');
     pnameInput.value = '';
     ppriceInput.value = '';
     alert('[성공] 제품 등록');
-    
+
 } // func end  // 등록함수 끝 
 
 // 3. 제품목록 출력함수
