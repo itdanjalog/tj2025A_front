@@ -83,7 +83,19 @@ function productAdd(){ console.log('>> productAdd exe');
     const pprice = ppriceInput.value;                               console.log( pprice );
      // 첨부파일은 value 대신에 files[0] : 선택된 첨부파일의 첫번째 파일객체 가져오기
     const pimg = pimgInput.files[0];                                console.log( pimg );
-    // (*) 유효성검사
+
+    // * 현재 날짜/시간 구하기 == new Date() 객체
+    let year = new Date().getFullYear(); // 현재 연도 반환 함수.
+    let month = new Date().getMonth()+1; // 현재 월 반환 함수 * 1월달이 0부터 시작이므로 +1 
+        month = month < 9 ? `0${month}` : month ; // 만약에 월이 한자리수 이면 앞에 '0' 붙인다.
+    let day = new Date().getDate();      // 현재 일 반환 함수 
+        day = day < 9 ? `0${day}` : day;    // 만약에 일 이 한자리수 이면 앞에 '0' 붙인다.
+    let pdate = `${year}-${month}-${day}`;                          console.log( pdate );
+    // (*) 유효성검사// * 입력한 값이 없으면 등록 실패 
+        if( cno == '' || pname == '' || pprice == '' ){
+            alert('비어있는 항목이 있습니다. [실패] ');
+            return; // 반환값 없는 함수종료 : 아래코드는 실행되지 않는다.
+        }
     // (3) 여러 데이터 객체로 구성 하기.
     const obj = { 
         pno : ++currentPno, // 현재제품코드에 1 증가 후 구성 
@@ -91,13 +103,17 @@ function productAdd(){ console.log('>> productAdd exe');
         pname : pname ,
         pprice : Number(pprice) , // 제품가격은 숫자형 타입변환 
         pimg : pimg ? URL.createObjectURL( pimg ) : 'https://placehold.co/100x100' ,  // URL.createObjectURL() : 선택한 파일객체의 url 주소 생성함수.
-        pdate : '2025-06-20'
+        pdate : pdate
     };                                                              console.log( obj );
     // (4) 구성한 객체를 배열에 저장
     productList.push( obj );                                        console.log( productList ); 
     // (*) 기타등등 
-} // func end 
-
+    categoryInput.value = '';
+    pnameInput.value = '';
+    ppriceInput.value = '';
+    alert('[성공] 제품 등록');
+    
+} // func end  // 등록함수 끝 
 
 // 3. 제품목록 출력함수
 
