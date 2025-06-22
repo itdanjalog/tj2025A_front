@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <style>
+
+        /* 전체 레이아웃 컨테이너 */
+        #wrap {
+            width: 100%;
+            max-width: 960px;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            margin: 50px auto;
+        }
+        
+        /* 등록 영역 */
+        #header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        /* 입력 필드 (input, select) 공통 스타일 */
+        #header input, #header select {
+            padding: 12px;
+            font-size: 14px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+        }
+
+        /* 등록 버튼 */
+        .btnAdd {
+            padding: 12px 25px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            background-color: #4c6ef5;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #main{
+            max-height: 800px;
+            overflow-y: auto;
+        }
+        /* 테이블 전체 */
+        #main table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        /* 테이블 헤더 */
+        #main thead {
+            background-color: #f8f9fa;
+        }
+
+        #main th {
+            padding: 14px 16px;
+            font-weight: 600;
+            border-bottom: 2px solid #dee2e6;
+            color: #495057;
+        }
+
+        /* 테이블 바디 */
+        #main tbody tr:hover {
+            background-color: #f1f3f5;
+        }
+
+        #main td {
+            padding: 5px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        /* 테이블 내 이미지 */
+        #main img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid #e9ecef;
+        }
+
+        /* 테이블 내 버튼 공통 스타일 */
+        .btnDelete, .btnEdit {
+            font-size: 15px;
+            padding: 7px 12px;
+            margin: 0 4px;
+            border-radius: 6px;
+            font-weight: bold;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+        
+        /* 수정 버튼 */
+        .btnEdit {
+            color: #4c6ef5;
+            background-color: #edf2ff;
+            border-color: #dbe4ff;
+        }
+        /* 삭제 버튼 */
+        .btnDelete {
+            color: #f03e3e;
+            background-color: #fff5f5;
+            border-color: #ffe3e3;
+        }
+    </style>    
+</head>
+<body>
+    
+    <div id="wrap"> <!-- 전체 구역 -->
+        <div id="header"> <!-- 등록 영역 -->
+            <select id="categoryInput">
+                <option value="" disabled selected > 카테고리 선택하세요. </option>
+                <option value="1"> 음료 </option>   <option value="2"> 과자 </option>
+            </select>
+            <input id="pnameInput"  type="text"   placeholder="제품명" />
+            <input id="ppriceInput" type="number" placeholder="제품가격" />
+            <input id="pimgInput"   type="file"  accept="image/* "/>
+            <button onclick="productAdd()" class="btnAdd"> 등록 </button>
+        </div>
+        <div id="main"> <!-- 출력 영역 -->
+            <table>
+                <thead>
+                    <tr> 
+                        <th> 이미지 </th>   <th> 카테고리명 </th>   <th> 상품명 </th> 
+                        <th> 가격 </th>     <th> 등록일 </th>       <th> 비고 </th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>    
+                        <td> <img src="https://placehold.co/100x100" /> </td>   <th> 음료 </td>   <td> 코카콜라 </td> 
+                        <td> 1000 </td>             <td> 2025-06-17 </td>       
+                        <td> <button class="btnDelete"> 삭제 </button> <button class="btnEdit"> 수정 </button> </td> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- JS파일은 HTML마크업이 모두 출력된 후에 실행한 예정 : body 가장 아래 작성-->
+    <script src='1_실습14.js'></script>
+</body>
+</html>
