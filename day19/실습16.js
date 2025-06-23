@@ -88,6 +88,7 @@ function login(){ console.log( '--> login exe ');
         }else{ // 'memberList' 속성명이 존재하면 JSON(배열) 타입으로 변환하기. 
             memberList = JSON.parse( memberList );
         }
+        
     for( let index = 0 ; index <= memberList.length-1 ; index++ ){
         const member = memberList[index]; // index번째 회원정보(객체)
         if( member.id == id && member.pw == pw ){
