@@ -61,7 +61,7 @@ if( visit == null ){ // 속성명이 존재하지 않을때 속성 초기화 해
 // 4. 특정한 마크업 객체 가져오기 
 const visitCount = document.querySelector('#visitCount');
 // 5. 마크업 사이에 html 대입하기 
-visitCount.innerHTML = visit
+visitCount.innerHTML = `이번 세션에서 ${ visit }번째 방문입니다.`
 
 
 
