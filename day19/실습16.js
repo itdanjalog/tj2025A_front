@@ -64,11 +64,11 @@ function login(){ console.log( '--> login exe ');
     for( let index = 0 ; index <= memberList.length-1 ; index++ ){
         const member = memberList[index]; // index번째 회원정보(객체)
         if( member.id == id && member.pw == pw ){
-            // 만약에 index번째 회원아이디가 입력한 아이디와 같고 회원비밀번호가 입력한 비밀번호 같으면
+            // 만약에 index번째 회원아이디가 입력한아이디와 같고 회원비밀번호가 입력한비밀번호 같으면
             alert('로그인 성공');   
             return; // 강제 함수(반복문) 종료
-        }
-    }
+        } // if end 
+    } // for end 
     // 4. 못찾았다.
     alert('로그인 실패');
 } // func end 
