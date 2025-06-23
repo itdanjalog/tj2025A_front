@@ -25,8 +25,32 @@
 4. 핵심 기능 구현
     -signup() 구현:
         --입력된 아이디와 비밀번호를 입력받아 (memberList)배열 에 새로 생성한 회원 객체를 추가(push)합니다.
-        --회원번호는 현재 배열의 마지막 대기번호에 1을 더한 값으로 자동 부여합니다.
+        --회원번호는 현재 배열의 마지막 회원번호에 1을 더한 값으로 자동 부여합니다.
     -login() 구현:
         --입력된 아이디와 비밀번호를 입력받아 (memberList)배열 내의 어떤 회원 객체의 id, pw 값과 모두 일치하면, "로그인 성공" 알림창을 띄우고 함수를 즉시 종료합니다.
         --일치하는 정보를 찾지 못하면, "동일한 회원정보가 없습니다. 로그인실패" 알림창을 띄웁니다.
 */
+
+// =============================== (1) 데이터 구성 ============================== //
+const memberList = [ 
+    { no : 1 , id : 'qwe' , pw : 'qwe'} , 
+    { no : 2 , id : 'asd' , pw : 'asd'}  
+]
+// =============================== (2) 회원가입 함수 ============================== //
+function signup(){  console.log('--> signup exe');
+    // 1. 입력마크업 객체 가져오기
+    const signId = document.querySelector('.signId');   console.log( signId );
+    const signPw = document.querySelector('.signPw');   console.log( signPw );
+    // 2. 입력마크업 객체내 입력값 가져오기
+    const id = signId.value;                            console.log( id );
+    const pw = signPw.value;                            console.log( pw );
+    // 3. 객체화
+    const no = memberList[ memberList.length-1 ].no + 1;    // 배열내 마지막인덱스의 회원번호 + 1
+    const obj = { no : no , id : id , pw : pw };        console.log( obj );
+    // 4. 배열 저장
+    memberList.push( obj );                             console.log( memberList );
+    alert('회원 등록 성공 ');     // 알림.
+} // func end 
+// =============================== (3) 로그인 함수 ============================== //
+
+
