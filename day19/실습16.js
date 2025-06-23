@@ -51,6 +51,24 @@ function signup(){  console.log('--> signup exe');
     memberList.push( obj );                             console.log( memberList );
     alert('회원 등록 성공 ');     // 알림.
 } // func end 
+
 // =============================== (3) 로그인 함수 ============================== //
-
-
+function login(){ console.log( '--> login exe ');
+    // 1. 입력마크업 객체 가져오기
+    const loginId = document.querySelector('.loginId');
+    const loginPw = document.querySelector('.loginPw');
+    // 2. 입력마크업 객체내 입력값 가져오기
+    const id = loginId.value;
+    const pw = loginPw.value;
+    // 3. 기존배열(회원목록)내 입력받은 값과 일치한 정보 찾기(비교) , <for>
+    for( let index = 0 ; index <= memberList.length-1 ; index++ ){
+        const member = memberList[index]; // index번째 회원정보(객체)
+        if( member.id == id && member.pw == pw ){
+            // 만약에 index번째 회원아이디가 입력한 아이디와 같고 회원비밀번호가 입력한 비밀번호 같으면
+            alert('로그인 성공');   
+            return; // 강제 함수(반복문) 종료
+        }
+    }
+    // 4. 못찾았다.
+    alert('로그인 실패');
+} // func end 
