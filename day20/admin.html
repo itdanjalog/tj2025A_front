@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+</head>
+<body>
+    
+    <div id="wrap"> <!-- 전체 구역 -->
+        <div id="header"> <!-- 등록 영역 -->
+            <input id="pnameInput"  type="text"   placeholder="제품명" />
+            <input id="ppriceInput" type="number" placeholder="제품가격" />
+            <textarea id="pcontentInput" placeholder="간단한설명"></textarea>
+            <input id="pimgInput"   type="file"  accept="image/* "/>
+            <button onclick="productAdd()" class="btnAdd"> 등록 </button>
+        </div>
+        <div id="main"> <!-- 출력 영역 -->
+            <table>
+                <thead>
+                    <tr> 
+                        <th> 이미지 </th>    <th> 상품명 </th> 
+                        <th> 가격 </th>     <th> 설명 </th>       <th> 비고 </th> 
+                    </tr>
+                </thead>
+                <tbody id="productBody">
+                    <tr>    
+                        <td> <img src="https://placehold.co/100x100" /> </td> <td> 코카콜라 </td> 
+                        <td> 1000 </td>             <td> 톡튀는 탄산이 일품 </td>       
+                        <td>  <button class="btnDelete"> 삭제 </button></td>    
+                    </tr>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="admin.js"> </script>
+</body>
+</html>
