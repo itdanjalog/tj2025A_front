@@ -8,7 +8,7 @@ function boardWrite(){
     const content = contentInput.value;
     const pwd = pwdInput.value;
     // 3. 객체화
-    const obj = { title , content , pwd };
+    const obj = { title , content , pwd  };
     // 4. localStorage 에서 배열 가져오기.
     let boardList = localStorage.getItem('boardList');
     if( boardList == null ){ boardList = [] }
