@@ -374,4 +374,17 @@
             // 호출 
                 let 배열변수 = JSON.parse( localStorage.getItem( '속성명' ) );
         (2) 비동기통신 (*추후)
-        
+
+[ interval ]
+    1. 정의 : 시간적인 간격에 따른 특정 함수 실행
+    2. 사용법 :
+        (1) setInterval( 함수명 , 밀리초 );     : 특정함수를 밀리초마다 실행 
+            - 밀리초 : 1/1000초
+            - 반환값 : interval 객체 반환 
+        (2) clearInterval( interval객체 );      : 특정 interval 중지
+    3. 예
+            let 변수명 = setInterval( 함수명 , 밀리초 );
+            clearInterval( 변수명 );
+
+[ 부트스트랩 ] : HTML/CSS/JS 라이브러리 , https://getbootstrap.kr/
+[ Chart.js ] : 차트(시각화) 라이브러리 , https://www.chartjs.org/
