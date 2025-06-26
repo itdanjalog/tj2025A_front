@@ -82,6 +82,7 @@
         [ git user.name 설정 ] git config --global user.name git닉네임
         [ git user.email 확인 ] git config --global user.email 
         [ git user.email 설정] git config --global user.email git아이디@이메일포함
-
+(3) 자리변경후 최초 커밋/푸시
+    1. 브라우저 로그인
 
 
