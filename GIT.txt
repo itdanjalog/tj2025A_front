@@ -158,11 +158,14 @@
         4) [Branch] -> [none]목록 클릭 -> '배포할 브랜치 선택' 후 -> [save]
         5) 1분~3분 대기후 F5새로고침
         6) 저장소의 호스팅 웹페이지 주소 발급 : https://itdanjalog.github.io/tj2025A_front/
+            [* index.html 없을때]
             https://itdanjalog.github.io/tj2025A_front/폴더명/XXXX.html
         7) 루트(최상위)경로 주소 : 저장소에 index.html 파일 필요.
-    
+            [* index.html 있을때]
+            https://itdanjalog.github.io/tj2025A_front/
+
     3. main 브랜치 코드가 변경되고 푸시 이후에 2분~3분 후 호스팅에도 코드가 반영 
-    
+
 
 
 
